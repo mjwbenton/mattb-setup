@@ -1,0 +1,11 @@
+# oh-my-zsh setup, everything else in ZSH_CUSTOM
+export ZSH=~/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
+ZSH_CUSTOM=~/.zsh-custom
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+export PATH="/usr/local/bin:$PATH"
+

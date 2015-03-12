@@ -1,0 +1,25 @@
+" ### Basics ###
+set nocp
+set directory=$HOME/.vim/swp
+set mouse=a
+
+" ### Tabs -> Spaces ###
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
+" ### Search ###
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+set wrap
+set number
+
+" ### Aliases ###
+map f :Explore!<CR>
+
+" ### Colors ###
+syntax enable
