@@ -5,7 +5,7 @@ FILES=$(find $SETUP_PATH -mindepth 1 -maxdepth 1 -not -path "*.git*" -not -name 
 for FILE in $FILES; do
     OUT_FILE=~/.$FILE
     IN_FILE=$SETUP_PATH/$FILE
-    if [ -f $OUT_FILE ] ; then
+    if [ -e $OUT_FILE ] ; then
         rm $OUT_FILE
     fi
     ln -s $IN_FILE $OUT_FILE
