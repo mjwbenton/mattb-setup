@@ -6,6 +6,7 @@ for FILE in $FILES; do
     OUT_FILE=~/.$FILE
     IN_FILE=$SETUP_PATH/$FILE
     if [ -e $OUT_FILE ] ; then
+        echo "Deleting existing file: $OUT_FILE"
         rm $OUT_FILE
     fi
     ln -s $IN_FILE $OUT_FILE

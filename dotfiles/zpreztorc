@@ -1,0 +1,40 @@
+zstyle ':prezto:*:*' color 'yes'
+
+# TODO: Do I want either of these
+# Set the Zsh modules to load (man zshmodules).
+# zstyle ':prezto:load' zmodule 'attr' 'stat'
+# Set the Zsh functions to load (man zshcontrib).
+# zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+
+# Plugins
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'git' \
+  'archive' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt' \
+  'osx' 
+
+# Editor
+zstyle ':prezto:module:editor' key-bindings 'vi'
+
+# History Substring Search
+zstyle ':prezto:module:history-substring-search' case-sensitive 'yes'
+
+# Syntax Highlighting
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'cursor' \
+  'root'
+
+# Prompt
+zstyle ':prezto:module:prompt' theme 'sorin'
