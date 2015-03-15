@@ -1,6 +1,8 @@
 source ~/.zprezto/init.zsh
 
 export PATH="/usr/local/bin:$PATH"
+export VISUAL=vim
+export EDITOR=$VISUAL
 
 # aliases
 alias mountprivate='hdiutil attach ~/Dropbox/private.dmg -stdinpass'
