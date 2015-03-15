@@ -1,7 +1,34 @@
 " ### Basics ###
-set nocp
+set nocompatible
 set directory=$HOME/.vim/swp
+set nobackup nowritebackup noswapfile autoread
 set mouse=a
+let mapleader=","
+set clipboard=unnamed,unnamedplus "use the system clipboard
+
+" ### Vundle ###
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'benmills/vimux'
+Plugin 'molokai'
+call vundle#end()
+filetype plugin indent on
+
+" ### Colours ###
+syntax on
+colorscheme molokai
+let g:molokai_original=1
+let g:rehash256=1
+set background=dark
+set t_Co=256
+
+" ### Lines ###
+set number
+set wrap
+let &colorcolumn=join(range(101,500),",")
+highlight ColorColumn ctermbg=234
 
 " ### Tabs -> Spaces ###
 set tabstop=4
@@ -15,11 +42,10 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set wrap
-set number
+" ### vimux ###
+map <Leader>tr :VimuxRunCommand(expand('%:p'))<CR>
+map <Leader>trl :VimuxRunLastCommand<CR>
+map <Leader>trp :VimuxPromptCommand<CR>
 
-" ### Aliases ###
+" ### Other Aliases ###
 map f :Explore!<CR>
-
-" ### Colors ###
-syntax enable
