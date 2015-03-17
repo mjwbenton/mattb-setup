@@ -27,7 +27,7 @@ set t_Co=256
 " ### Lines ###
 set number
 set wrap
-let &colorcolumn=join(range(101,500),",")
+let &colorcolumn=join(range(121,500),",")
 highlight ColorColumn ctermbg=234
 
 " ### Tabs -> Spaces ###
