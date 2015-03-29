@@ -52,6 +52,12 @@ defaults write com.apple.dock autohide -bool true
 # ----- Disable notification center
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
+# ----- Lower the font smoothing level a little
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+
+# ----- Play feedback when volume is changed
+defaults write -g "com.apple.sound.beep.feedback" -int 1
+
 # ----- Kill affected apps to get them to restart
 for app in "cfprefsd" "Dock" "Finder" "SystemUIServer"; do
     killall "${app}" > /dev/null 2>&1
