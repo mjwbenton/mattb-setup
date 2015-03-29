@@ -2,6 +2,3 @@
 	autosetuprebase = always
 [color]
 	ui = true
-[user]
-	name = Matt Benton
-	email = me@mattbenton.co.uk
