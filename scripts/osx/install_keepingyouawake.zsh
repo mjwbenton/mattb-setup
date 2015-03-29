@@ -7,3 +7,5 @@ echo "Fetching $url"
 wget --quiet --output-document=$location_zip $url
 echo "Unziping $location_zip"
 unzip -qq $location_zip -d ~/Applications/
+echo "Removing download"
+rm $location_zip
