@@ -28,5 +28,8 @@ function install_home_symlinks() {
 
 echo "Standard dotfiles installing..."
 install_home_symlinks $standard_path
-echo "Local override dotfiles installing..."
-install_home_symlinks $local_path
+
+if [ -d $local_path ]; then
+    echo "Local override dotfiles installing..."
+    install_home_symlinks $local_path
+fi
