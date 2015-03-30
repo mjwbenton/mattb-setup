@@ -27,8 +27,11 @@ set t_Co=256
 " ### Lines ###
 set number
 set wrap
-let &colorcolumn=join(range(121,500),",")
-highlight ColorColumn ctermbg=234
+" colorcolumn introduced in vim 7.3
+if exists("&colorcolumn")
+    let &colorcolumn=join(range(121,500),",")
+    highlight ColorColumn ctermbg=234
+endif
 
 " ### Tabs -> Spaces ###
 set tabstop=4
