@@ -13,6 +13,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'benmills/vimux'
 Plugin 'molokai'
+Plugin 'wincent/command-t'
 call vundle#end()
 filetype plugin indent on
 
