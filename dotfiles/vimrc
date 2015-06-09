@@ -5,6 +5,7 @@ set nobackup nowritebackup noswapfile autoread
 set mouse=a
 let mapleader=","
 set clipboard=unnamed,unnamedplus "use the system clipboard
+let backspace=2
 
 " ### Vundle ###
 filetype off
@@ -13,7 +14,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'benmills/vimux'
 Plugin 'molokai'
-Plugin 'wincent/command-t'
+Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 call vundle#end()
@@ -53,9 +54,13 @@ map <Leader>tr :VimuxRunCommand(expand('%:p'))<CR>
 map <Leader>trl :VimuxRunLastCommand<CR>
 map <Leader>trp :VimuxPromptCommand<CR>
 
+" ### netrw ###
+let g:netrw_liststyle=3
+
 " ### Javascript ###
 " Turn JSX highlighting on for all files
 let g:jsx_ext_required = 0
 
 " ### Other Aliases ###
+nnoremap <Leader>p :CtrlP<CR>
 map f :Explore!<CR>
