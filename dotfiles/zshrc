@@ -6,7 +6,9 @@ export EDITOR=$VISUAL
 alias glog='git log --oneline --decorate --graph --all'
 
 # perlbrew
-source ~/perl5/perlbrew/etc/bashrc
+if [ -e ~/perl5/perlbrew/etc/bashrc ]; then
+    source ~/perl5/perlbrew/etc/bashrc
+fi
 
 # source local extras if it exists
 if [ -e ~/.zshrc.local ]; then
