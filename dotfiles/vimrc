@@ -14,6 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'benmills/vimux'
 Plugin 'molokai'
 Plugin 'wincent/command-t'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 call vundle#end()
 filetype plugin indent on
 
@@ -50,6 +52,10 @@ set smartcase
 map <Leader>tr :VimuxRunCommand(expand('%:p'))<CR>
 map <Leader>trl :VimuxRunLastCommand<CR>
 map <Leader>trp :VimuxPromptCommand<CR>
+
+" ### Javascript ###
+" Turn JSX highlighting on for all files
+let g:jsx_ext_required = 0
 
 " ### Other Aliases ###
 map f :Explore!<CR>
