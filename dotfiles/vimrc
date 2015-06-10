@@ -5,7 +5,7 @@ set nobackup nowritebackup noswapfile autoread
 set mouse=a
 let mapleader=","
 set clipboard=unnamed,unnamedplus "use the system clipboard
-let backspace=2
+set backspace=2
 
 " ### Vundle ###
 filetype off
