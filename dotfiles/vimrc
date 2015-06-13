@@ -17,6 +17,13 @@ Plugin 'molokai'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-surround'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'guns/xterm-color-table.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 
@@ -49,11 +56,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" ### vimux ###
-map <Leader>tr :VimuxRunCommand(expand('%:p'))<CR>
-map <Leader>trl :VimuxRunLastCommand<CR>
-map <Leader>trp :VimuxPromptCommand<CR>
-
 " ### netrw ###
 let g:netrw_liststyle=3
 
@@ -61,6 +63,20 @@ let g:netrw_liststyle=3
 " Turn JSX highlighting on for all files
 let g:jsx_ext_required = 0
 
-" ### Other Aliases ###
+" ### indent-guides (:help indent-guides) ###
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_default_mapping = 0
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+
+" ### Leader Aliases ###
 nnoremap <Leader>p :CtrlP<CR>
-map f :Explore!<CR>
+nnoremap <Leader>tr :VimuxRunCommand(expand('%:p'))<CR>
+nnoremap <Leader>trl :VimuxRunLastCommand<CR>
+nnoremap <Leader>trp :VimuxPromptCommand<CR>
+nnoremap <Leader>f :Explore!<CR>
+
+" ### Status Line / Airline ###
+set laststatus=2
+let g:airline_powerline_fonts = 1
