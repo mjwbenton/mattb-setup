@@ -1,5 +1,7 @@
 tap 'caskroom/cask'
 tap 'caskroom/versions'
+brew 'vim'
+brew 'cmake'
 brew 'brew-cask'
 brew 'ack'
 brew 'fortune'

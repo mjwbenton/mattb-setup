@@ -25,6 +25,8 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -90,3 +92,7 @@ let g:syntastic_check_on_wq = 0
 " Perl
 let g:syntastic_enable_perl_checker = 0 "Disabled by default - will run BEGIN blocks
 let g:syntastic_perl_checkers = ['perl']
+
+" ### You Complete Me/Autocomplete ###
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
