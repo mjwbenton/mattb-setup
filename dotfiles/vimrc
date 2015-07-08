@@ -7,6 +7,15 @@ let mapleader=","
 set clipboard=unnamed,unnamedplus "use the system clipboard
 set backspace=2
 
+" ### Detect OSX ###
+let s:on_osx=1
+if has("unix")
+    let s:uname=system("uname")
+    if s:uname=="Darwin\n"
+        let s:on_osx=1
+    endif
+endif
+
 " ### Vundle ###
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -25,8 +34,11 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
+" YouCompleteMe currently fails to build on my linux machine
+if s:on_osx
+    Plugin 'Valloric/YouCompleteMe'
+    Plugin 'marijnh/tern_for_vim'
+endif
 call vundle#end()
 filetype plugin indent on
 
@@ -93,6 +105,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 0 "Disabled by default - will run BEGIN blocks
 let g:syntastic_perl_checkers = ['perl']
 
-" ### You Complete Me/Autocomplete ###
+" ### YouCompleteMe/Autocomplete ###
 set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" ### Include .vimrc.local file for local overrides
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
