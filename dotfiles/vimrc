@@ -8,7 +8,7 @@ set clipboard=unnamed,unnamedplus "use the system clipboard
 set backspace=2
 
 " ### Detect OSX ###
-let s:on_osx=1
+let s:on_osx=0
 if has("unix")
     let s:uname=system("uname")
     if s:uname=="Darwin\n"
