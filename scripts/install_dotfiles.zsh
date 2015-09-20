@@ -10,10 +10,21 @@ local_path=`pwd`/dotfiles.local/
 function install_home_symlinks() {
     setopt shwordsplit
     file_path=$1
-    files=$(find $file_path -mindepth 1 -maxdepth 1 -not -path "*.git*" -not -exec basename {} \;)
+    cd $file_path
+
+    # Create any directories that don't exist
+    directories=$(find . -mindepth 1 -maxdepth 1 -not -path "*.git*" -type directory -exec basename {} \;)
+    for dir in $directories; do
+        out_dir=~/.$dir
+        [ -d $out_dir ] || mkdir $out_dir
+    done;
+
+    # Install files
+    files=$(find . -mindepth 1 -type file -not -path "*.git*")
     for file in $files; do
-        out_file=~/.$file
-        in_file=$file_path$file
+        file_stripped=`echo $file | cut -c3-`
+        out_file=~/.$file_stripped
+        in_file=$file_path$file_stripped
         if [ -h $out_file ] ; then
             echo "Deleting existing symlink: $out_file"
             rm $out_file
