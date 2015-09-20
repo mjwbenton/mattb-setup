@@ -1,0 +1,25 @@
+"*":
+  "exception-reporting":
+    userId: "6f45b3c8-0e8c-b99e-f9e4-eb08722f2adb"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    invisibles: {}
+    tabLength: 4
+  "terminal-plus":
+    core: {}
+    style:
+      fontFamily: "Input Mono"
+      fontSize: 12
+    toggles:
+      autoClose: true
+  "atom-material-ui":
+    panelContrast: true
+    useRoboto: true
+    useRobotoInUI: true
+  minimap: {}
