@@ -6,6 +6,10 @@ set mouse=a
 let mapleader=","
 set clipboard=unnamed,unnamedplus "use the system clipboard
 set backspace=2
+set undodir=~/.vim/undo
+set undofile
+set undolevels=1000
+set undoreload=10000
 
 " ### Detect OSX ###
 let s:on_osx=0
