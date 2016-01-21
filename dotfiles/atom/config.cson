@@ -25,3 +25,7 @@
     useRoboto: true
     useRobotoInUI: true
   minimap: {}
+  "atom-ternjs": {}
+  docblockr: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
