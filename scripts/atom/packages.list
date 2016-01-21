@@ -6,6 +6,5 @@ linter-eslint@3.0.2
 linter-jsonlint@1.0.1
 linter-markdownlint@1.0.1
 minimap@4.13.3
-terminal-plus@0.4.2
 vim-mode@0.60.0
 
