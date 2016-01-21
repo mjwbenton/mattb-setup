@@ -32,6 +32,8 @@ defaults write com.apple.spotlight orderedItems -array \
   '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 # Load new settings before rebuilding the index
 killall mds > /dev/null 2>&1
+# Make sure indexing is turned off for all additional volumes
+sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
@@ -57,6 +59,9 @@ defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
 
 # ----- Play feedback when volume is changed
 defaults write -g "com.apple.sound.beep.feedback" -int 1
+
+# ----- Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
 
 # ----- Kill affected apps to get them to restart
 for app in "cfprefsd" "Dock" "Finder" "SystemUIServer"; do
