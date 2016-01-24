@@ -1,4 +1,7 @@
 mattb-setup
 ===========
 
-TODO: Write something here
+An assortment of configuration and scripting to setup my machines for development.
+
+* [dotfiles](./dotfiles/)
+* [scripts](./scripts/)
