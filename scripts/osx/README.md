@@ -19,4 +19,14 @@ Before running any of these scripts, there some other stuff I normally do on a n
 Scripted setup
 --------------
 
-TODO
+* git clone this repo: `git clone https://github.com/mjwbenton/mattb-setup.git`
+* `osx/scripts/setup_osx.bash`
+* `osx/scripts/install_brews.zsh`
+* Once all the software is installed...
+  * You can run the non-OSX specific scripts
+  * `osx/scripts/change_shell.zsh`
+  * `osx/scripts/install_powerline_fonts.zsh`
+  * `osx/scripts/setup_ubersicht.zsh`
+  * `osx/scripts/setup_iterm.zsh`
+  * `osx/scripts/setup_latex.zsh`
+* `osx/scripts/install_epsonscan.zsh`
