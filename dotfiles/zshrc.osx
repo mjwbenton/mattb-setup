@@ -1,0 +1,10 @@
+# Stuff that will be common across OSX devices
+
+export PATH="/usr/local/bin:$PATH:/usr/local/texlive/2015basic/bin/x86_64-darwin/"
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# AWS completions
+source /usr/local/share/zsh/site-functions/_aws

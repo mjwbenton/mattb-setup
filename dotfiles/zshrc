@@ -10,6 +10,12 @@ if [ -e ~/perl5/perlbrew/etc/bashrc ]; then
     source ~/perl5/perlbrew/etc/bashrc
 fi
 
+if [[ `uname` == 'Darwin' ]]; then
+    if [ -e ~/.zshrc.osx ]; then
+        source ~/.zshrc.osx
+    fi
+fi
+
 # source local extras if it exists
 if [ -e ~/.zshrc.local ]; then
     source ~/.zshrc.local
