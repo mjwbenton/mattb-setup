@@ -13,14 +13,14 @@ function install_home_symlinks() {
     cd $file_path
 
     # Create any directories that don't exist
-    directories=$(find . -mindepth 1 -maxdepth 1 -not -path "*.git*" -type directory -exec basename {} \;)
+    directories=$(find . -mindepth 1 -maxdepth 1 -not -path "*.git*" -type d -exec basename {} \;)
     for dir in $directories; do
         out_dir=~/.$dir
         [ -d $out_dir ] || mkdir $out_dir
     done;
 
     # Install files
-    files=$(find . -mindepth 1 -type file -not -path "*.git*")
+    files=$(find . -mindepth 1 -type f -not -path "*.git*")
     for file in $files; do
         file_stripped=`echo $file | cut -c3-`
         out_file=~/.$file_stripped
