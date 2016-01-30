@@ -30,4 +30,5 @@ Scripted setup
   * `osx/scripts/setup_iterm.zsh`
   * `osx/scripts/setup_latex.zsh`
   * Manually configure Dropbox, nvALT, Crashplan
+  * nvm install stable && nvm alias default stable
 * `osx/scripts/install_epsonscan.zsh`
