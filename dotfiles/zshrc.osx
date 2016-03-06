@@ -8,3 +8,34 @@ source $(brew --prefix nvm)/nvm.sh
 
 # AWS completions
 source /usr/local/share/zsh/site-functions/_aws
+
+# Make a .gif from a .mov (for screen capture)
+mov2gif() {
+    DELAY=3
+    SCALE='iw:ih'
+    while [ "$1" != "" ]; do
+        PARAM=`echo $1 | awk -F= '{print $1}'`
+        VALUE=`echo $1 | awk -F= '{print $2}'`
+        case $PARAM in
+            --in)
+                IN_FILE=$VALUE
+                ;;
+            --out)
+                OUT_FILE=$VALUE
+                ;;
+            --scale)
+                SCALE=$VALUE
+                ;;
+            --delay)
+                DELAY=$VALUE
+                ;;
+            *)
+                echo "Error: Unknown Parameter \"$PARAM\""
+                return
+                ;;
+        esac
+        shift
+    done
+
+    ffmpeg -i $IN_FILE -vf scale=$SCALE -pix_fmt rgb8 -r 10 -f gif - | gifsicle --optimize=3 --delay=$DELAY > $OUT_FILE
+}
