@@ -1,4 +1,5 @@
 brew tap caskroom/versions
+brew tap neovim/neovim
 brew 'vim'
 brew 'cmake'
 brew 'ack'
@@ -19,6 +20,7 @@ brew 'exiftool'
 brew 'ffmpeg'
 brew 'gifsicle'
 brew 'duck'
+brew 'neovim'
 cask 'xquartz'
 cask 'atom'
 cask 'java'
