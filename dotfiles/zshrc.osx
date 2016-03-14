@@ -41,4 +41,4 @@ mov2gif() {
 }
 
 # Aliases
-alias nvim='vim'
+alias vim='nvim'
