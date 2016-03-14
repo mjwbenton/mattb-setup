@@ -39,3 +39,6 @@ mov2gif() {
 
     ffmpeg -i $IN_FILE -vf scale=$SCALE -pix_fmt rgb8 -r 10 -f gif - | gifsicle --optimize=3 --delay=$DELAY > $OUT_FILE
 }
+
+# Aliases
+alias nvim='vim'

@@ -1,5 +1,6 @@
 brew tap caskroom/versions
 brew tap neovim/neovim
+brew 'python'
 brew 'vim'
 brew 'cmake'
 brew 'ack'
