@@ -43,3 +43,7 @@ mov2gif() {
 # Aliases
 alias vim='nvim'
 alias tar='gtar'
+
+# Re-export editor with nvim alias in place
+export VISUAL=nvim
+export EDITOR=$VISUAL
