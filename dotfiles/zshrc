@@ -20,3 +20,8 @@ fi
 if [ -e ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
+
+# Function to tar.gz up a directory
+targzdir() {
+  tar --exclude-vcs --exclude-vcs-ignores -cvzf $1.tar.gz $1
+}

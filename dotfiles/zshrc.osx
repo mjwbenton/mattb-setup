@@ -42,3 +42,4 @@ mov2gif() {
 
 # Aliases
 alias vim='nvim'
+alias tar='gtar'
