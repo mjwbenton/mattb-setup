@@ -47,3 +47,6 @@ alias tar='gtar'
 # Re-export editor with nvim alias in place
 export VISUAL=nvim
 export EDITOR=$VISUAL
+
+# Set ulimit number of file descriptors (otherwise it seems to be too low on El Capitan)
+ulimit -S -n 2560
