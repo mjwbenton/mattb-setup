@@ -39,6 +39,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
+Plugin 'christoomey/vim-tmux-navigator'
 " YouCompleteMe currently fails to build on my linux machine
 if s:on_osx
     Plugin 'Valloric/YouCompleteMe'
@@ -114,6 +115,16 @@ let g:syntastic_perl_checkers = ['perl']
 " ### YouCompleteMe/Autocomplete ###
 set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" ### Setup for seemless tmux integration
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
+
+" ### ctrlp ###
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " ### Include .vimrc.local file for local overrides
 if filereadable(glob("~/.vimrc.local")) 
