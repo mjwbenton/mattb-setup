@@ -4,6 +4,7 @@ export EDITOR=$VISUAL
 
 # aliases
 alias glog='git log --oneline --decorate --graph --all'
+alias webserver="python -m SimpleHTTPServer"
 
 # perlbrew
 if [ -e ~/perl5/perlbrew/etc/bashrc ]; then
