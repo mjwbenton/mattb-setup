@@ -1,31 +1,67 @@
 "*":
-  "atom-material-ui":
-    panelContrast: true
-    useRoboto: true
-    useRobotoInUI: true
-  "atom-ternjs": {}
   core:
-    themes: [
-      "atom-material-ui"
-      "atom-material-syntax"
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "tree-view"
+      "linter"
     ]
-  docblockr: {}
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/mattb/projects"
   editor:
-    fontSize: 17
+    fontFamily: "Input Mono"
     invisibles: {}
-    preferredLineLength: 120
+    softWrapHangingIndent: 4
     tabLength: 4
   "exception-reporting":
-    userId: "6f45b3c8-0e8c-b99e-f9e4-eb08722f2adb"
-  minimap: {}
-  "terminal-plus":
-    core: {}
-    style:
-      fontFamily: "Input Mono"
-      fontSize: 12
-    toggles:
-      autoClose: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+    userId: "9a2db530-250a-d825-0816-b8ebb933b8c9"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  nuclide:
+    installRecommendedPackages: true
+    "nuclide-diagnostics-store":
+      legacyLintOnTheFly: true
+    "nuclide-flow":
+      diagnosticsOnFly: true
+    "nuclide-home":
+      showHome: false
+    "nuclide-working-sets": {}
+    use:
+      "nuclide-adb-logcat": false
+      "nuclide-arcanist": false
+      "nuclide-blame": false
+      "nuclide-blame-provider-hg": false
+      "nuclide-blame-ui": false
+      "nuclide-buck-files": false
+      "nuclide-buck-toolbar": false
+      "nuclide-debugger-hhvm": false
+      "nuclide-diff-view": false
+      "nuclide-hack": false
+      "nuclide-hack-symbol-provider": false
+      "nuclide-hg-conflict-resolver": false
+      "nuclide-hg-repository": false
+      "nuclide-hhvm-toolbar": false
+      "nuclide-language-hack": false
+      "nuclide-ocaml": false
+      "nuclide-remote-projects": false
+      "nuclide-service-monitor": false
   welcome:
     showOnStartup: false
+".ansi.text":
+  editor:
+    softWrapHangingIndent: 4
+    tabLength: 4
+".hackfragment.source":
+  editor:
+    softWrapHangingIndent: 4
+    tabLength: 4
