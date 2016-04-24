@@ -20,6 +20,7 @@
     projectHome: "/Users/mattb/projects"
   editor:
     fontFamily: "Input Mono"
+    fontSize: 13
     invisibles: {}
     softWrapHangingIndent: 4
     tabLength: 4
@@ -37,13 +38,9 @@
       showHome: false
     "nuclide-working-sets": {}
     use:
-      "nuclide-adb-logcat": false
-      "nuclide-arcanist": false
       "nuclide-blame": false
       "nuclide-blame-provider-hg": false
       "nuclide-blame-ui": false
-      "nuclide-buck-files": false
-      "nuclide-buck-toolbar": false
       "nuclide-debugger-hhvm": false
       "nuclide-diff-view": false
       "nuclide-hack": false
@@ -54,7 +51,6 @@
       "nuclide-language-hack": false
       "nuclide-ocaml": false
       "nuclide-remote-projects": false
-      "nuclide-service-monitor": false
   "tool-bar":
     visible: false
   welcome:
