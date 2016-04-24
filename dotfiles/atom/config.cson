@@ -55,6 +55,8 @@
       "nuclide-ocaml": false
       "nuclide-remote-projects": false
       "nuclide-service-monitor": false
+  "tool-bar":
+    visible: false
   welcome:
     showOnStartup: false
 ".ansi.text":
