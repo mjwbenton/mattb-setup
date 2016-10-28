@@ -1,6 +1,7 @@
 brew tap caskroom/versions
 brew tap neovim/neovim
 brew 'ack'
+brew 'the_silver_searcher'
 brew 'android-sdk'
 brew 'awscli'
 brew 'cmake'
