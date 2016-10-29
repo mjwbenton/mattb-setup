@@ -40,6 +40,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'neomake/neomake'
+Plugin 'junegunn/goyo.vim'
+Plugin 'plasticboy/vim-markdown'
 " YouCompleteMe currently fails to build on my linux machine
 if s:on_osx
     Plugin 'Valloric/YouCompleteMe'
