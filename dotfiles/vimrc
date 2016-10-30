@@ -85,9 +85,11 @@ let g:netrw_liststyle=3
 " ### Javascript ###
 " Turn JSX highlighting on for all files
 let g:jsx_ext_required = 0
-" Neomake
+
+" ### Neomake ###
 let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 let g:neomake_jsx_enabled_makers = ['eslint', 'flow']
+let g:neomake_java_enabled_makers = []
 autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
 
