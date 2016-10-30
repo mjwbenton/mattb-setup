@@ -125,6 +125,9 @@ nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 " ### ctrlp ###
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" ### Markdown ###
+let g:vim_markdown_folding_disabled = 1
+
 " ### Include .vimrc.local file for local overrides
 if filereadable(glob("~/.vimrc.local")) 
     source ~/.vimrc.local
