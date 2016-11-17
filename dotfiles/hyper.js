@@ -36,8 +36,7 @@ module.exports = {
   },
 
   plugins: [
-      'hypertile',
-      'hyperpower'
+      'hypertile'
   ],
 
   // `~/.hyper_plugins/local/`
