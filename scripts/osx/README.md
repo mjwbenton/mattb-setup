@@ -28,7 +28,6 @@ Scripted setup
   * `osx/scripts/change_shell.zsh`
   * `osx/scripts/install_powerline_fonts.zsh`
   * `osx/scripts/setup_ubersicht.zsh`
-  * `osx/scripts/setup_iterm.zsh`
   * `osx/scripts/setup_latex.zsh`
   * Manually configure Dropbox, nvALT, Crashplan
   * nvm install stable && nvm alias default stable
