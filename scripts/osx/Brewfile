@@ -1,3 +1,4 @@
+brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap neovim/neovim
 brew 'ack'
@@ -41,6 +42,7 @@ cask 'basictex'
 cask 'crashplan'
 cask 'dropbox'
 cask 'firefox'
+cask 'font-fira-code'
 cask 'genymotion'
 cask 'gimp'
 cask 'google-chrome'
