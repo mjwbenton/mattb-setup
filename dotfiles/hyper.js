@@ -1,14 +1,18 @@
 module.exports = {
   config: {
     fontSize: 12,
-    fontFamily: '"Meslo LG M DZ for Powerline", "Menlo", monospace',
+    fontFamily: '"Fira Code", "Meslo LG M DZ for Powerline", "Menlo", monospace',
     cursorColor: 'rgba(240,242,53,0.7)',
     cursorShape: 'BLOCK',
     foregroundColor: '#fff',
     backgroundColor: '#111',
     borderColor: '#222',
     css: '',
-    termCSS: '',
+    termCSS: `
+        x-screen x-row {
+            font-variant-ligatures: initial;
+        }
+    `,
     padding: '0px',
     colors: {
       black: '#000000',
