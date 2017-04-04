@@ -26,7 +26,6 @@ Scripted setup
 * Once all the software is installed...
   * You can run the non-OSX specific scripts
   * `osx/scripts/change_shell.zsh`
-  * `osx/scripts/install_powerline_fonts.zsh`
   * `osx/scripts/setup_ubersicht.zsh`
   * `osx/scripts/setup_latex.zsh`
   * Manually configure Dropbox, nvALT, Crashplan
