@@ -25,46 +25,31 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'benmills/vimux'
-Plugin 'molokai'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-surround'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'guns/xterm-color-table.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'neomake/neomake'
-Plugin 'junegunn/goyo.vim'
 Plugin 'plasticboy/vim-markdown'
-" YouCompleteMe currently fails to build on my linux machine
-if s:on_osx
-    Plugin 'Valloric/YouCompleteMe'
-endif
+Plugin 'rakr/vim-one'
 call vundle#end()
 filetype plugin indent on
 
 " ### Colours ###
 syntax on
-silent! colorscheme molokai
-let g:molokai_original=1
-let g:rehash256=1
-set background=dark
+silent! colorscheme one
+set background=light
+let g:one_allow_italics = 1
 set t_Co=256
 
 " ### Lines ###
 set number
 set wrap
-" colorcolumn introduced in vim 7.3
-if exists("&colorcolumn")
-    let &colorcolumn=join(range(121,500),",")
-    highlight ColorColumn ctermbg=234
-endif
 
 " ### Tabs -> Spaces ###
 set tabstop=4
@@ -86,34 +71,13 @@ let g:netrw_liststyle=3
 " Turn JSX highlighting on for all files
 let g:jsx_ext_required = 0
 
-" ### Neomake ###
-let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
-let g:neomake_jsx_enabled_makers = ['eslint', 'flow']
-let g:neomake_java_enabled_makers = []
-autocmd! BufWritePost * Neomake
-let g:neomake_open_list = 2
-
-" ### indent-guides (:help indent-guides) ###
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_default_mapping = 0
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
-
 " ### Leader Aliases ###
 nnoremap <Leader>p :CtrlP<CR>
-nnoremap <Leader>tr :VimuxRunCommand(expand('%:p'))<CR>
-nnoremap <Leader>trl :VimuxRunLastCommand<CR>
-nnoremap <Leader>trp :VimuxPromptCommand<CR>
 nnoremap <Leader>f :Explore!<CR>
 
 " ### Status Line / Airline ###
 set laststatus=2
 let g:airline_powerline_fonts = 1
-
-" ### YouCompleteMe/Autocomplete ###
-set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " ### Setup for seemless tmux integration
 let g:tmux_navigator_no_mappings = 1
