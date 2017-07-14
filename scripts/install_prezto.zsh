@@ -13,7 +13,7 @@ fi
 #            so store it with our dotfiles
 #  - zpreztorc - pretzo configuration needs to be modified, so again lives with the dotfiles
 setup_path=$install_path/runcoms
-files=($(find $setup_path/* -not -name README.md -not -name zshrc -not -name zpreztorc -exec basename {} \;))
+files=($(find $setup_path/* -not -name README.md -not -name zshrc -not -name zpreztorc -not -name zlogout -exec basename {} \;))
 
 # Symlink the files into place
 for file in $files; do
