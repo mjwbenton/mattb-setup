@@ -2,6 +2,7 @@ brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap neovim/neovim
 brew 'ack'
+cask 'arq'
 brew 'the_silver_searcher'
 brew 'android-sdk'
 brew 'awscli'
@@ -39,7 +40,6 @@ cask 'adobe-creative-cloud'
 cask 'amazon-music'
 cask 'arrsync'
 cask 'basictex'
-cask 'crashplan'
 cask 'dropbox'
 cask 'firefox'
 cask 'font-fira-code'
