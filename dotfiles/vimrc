@@ -4,6 +4,7 @@ set directory=$HOME/.vim/swp
 set nobackup nowritebackup noswapfile autoread
 set mouse=a
 let mapleader=","
+let maplocalleader=","
 set clipboard=unnamed,unnamedplus "use the system clipboard
 set backspace=2
 set undodir=~/.vim/undo
@@ -23,12 +24,9 @@ endif
 " ### Vundle ###
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -36,13 +34,17 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'rakr/vim-one'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'alok/notational-fzf-vim'
+Plugin 'shime/vim-livedown'
+Plugin 'aserebryakov/vim-todo-lists'
 call vundle#end()
 filetype plugin indent on
 
 " ### Colours ###
 syntax on
-silent! colorscheme one
+let ayucolor="light"
+silent! colorscheme ayu
 set background=light
 let g:one_allow_italics = 1
 set t_Co=256
@@ -67,17 +69,15 @@ set smartcase
 " ### netrw ###
 let g:netrw_liststyle=3
 
-" ### Javascript ###
-" Turn JSX highlighting on for all files
-let g:jsx_ext_required = 0
-
 " ### Leader Aliases ###
 nnoremap <Leader>p :CtrlP<CR>
 nnoremap <Leader>f :Explore!<CR>
+nnoremap <Leader>l :LivedownToggle<CR>
 
 " ### Status Line / Airline ###
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline_theme='papercolor'
 
 " ### Setup for seemless tmux integration
 let g:tmux_navigator_no_mappings = 1
@@ -86,11 +86,25 @@ nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
 nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
 nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 
-" ### ctrlp ###
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
 " ### Markdown ###
+au BufRead,BufNewFile *.txt set filetype=markdown
 let g:vim_markdown_folding_disabled = 1
+
+" ### TODO ### 
+let g:VimTodoListsDatesEnabled = 1
+let g:VimTodoListsDatesFormat = "%Y-%m-%d"
+
+" ### NV ####
+let g:nv_search_paths=['~/notes']
+let g:nv_use_short_pathnames = 1
+let g:nv_default_extension = '.txt'
+nnoremap <Leader>n :NV<CR>
+let g:nv_keymap = {
+    \ 'ctrl-s': 'split ',
+    \ 'ctrl-v': 'vertical split ',
+    \ }
+let g:nv_create_note_key = 'ctrl-n'
+let g:nv_create_note_window = 'vertical split'
 
 " ### Include .vimrc.local file for local overrides
 if filereadable(glob("~/.vimrc.local")) 
