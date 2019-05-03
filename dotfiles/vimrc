@@ -37,7 +37,6 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'alok/notational-fzf-vim'
 Plugin 'shime/vim-livedown'
-Plugin 'aserebryakov/vim-todo-lists'
 call vundle#end()
 filetype plugin indent on
 
@@ -89,10 +88,6 @@ nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 " ### Markdown ###
 au BufRead,BufNewFile *.txt set filetype=markdown
 let g:vim_markdown_folding_disabled = 1
-
-" ### TODO ### 
-let g:VimTodoListsDatesEnabled = 1
-let g:VimTodoListsDatesFormat = "%Y-%m-%d"
 
 " ### NV ####
 let g:nv_search_paths=['~/notes']
