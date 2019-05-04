@@ -12,33 +12,20 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 
-" ### Detect OSX ###
-let s:on_osx=0
-if has("unix")
-    let s:uname=system("uname")
-    if s:uname=="Darwin\n"
-        let s:on_osx=1
-    endif
-endif
-
-" ### Vundle ###
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=/usr/local/opt/fzf
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'ayu-theme/ayu-vim'
-Plugin 'alok/notational-fzf-vim'
-Plugin 'shime/vim-livedown'
-call vundle#end()
-filetype plugin indent on
+" ### vim-plug ###
+call plug#begin('~/.vim/plugged')
+Plug 'godlygeek/tabular'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'plasticboy/vim-markdown'
+Plug 'ayu-theme/ayu-vim'
+Plug '/usr/local/opt/fzf'
+Plug 'alok/notational-fzf-vim'
+Plug 'shime/vim-livedown'
+call plug#end()
 
 " ### Colours ###
 syntax on
