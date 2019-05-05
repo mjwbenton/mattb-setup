@@ -5,12 +5,11 @@
     "typescriptreact",
     "json",
     "javascriptreact",
-    "Markdown"
+    "markdown"
   ],
   "coc.preferences.snippets.enable": false,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.virtualText": true,
-  "json.format.enable": true,
-  "prettier.formatterPriority": 1,
+  "prettier.formatterPriority": 9999999999,
   "suggest.noselect": false
 }
