@@ -12,5 +12,8 @@ if ! [ -d $undo_dir ]; then
     mkdir -m 700 -p $undo_dir
 fi
 
+# coc.vim requires yarn
+npm install -g yarn
+
 # Install the plugins in the vimrc
 vim +PlugInstall +qall

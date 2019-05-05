@@ -23,8 +23,16 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'plasticboy/vim-markdown'
 Plug 'ayu-theme/ayu-vim'
 Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'alok/notational-fzf-vim'
-Plug 'shime/vim-livedown'
+Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
+" ## Coc ##
+Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 " ### Colours ###
@@ -55,15 +63,27 @@ set smartcase
 " ### netrw ###
 let g:netrw_liststyle=3
 
-" ### Leader Aliases ###
-nnoremap <Leader>p :CtrlP<CR>
+" ### Aliases ###
+nnoremap <Leader>n :NV<CR>
 nnoremap <Leader>f :Explore!<CR>
 nnoremap <Leader>l :LivedownToggle<CR>
+nnoremap <Leader>s :Rg<CR>
+" ## Coc Aliases ##
+inoremap <silent><expr> <c-space> coc#refresh()
+nmap <leader>a <Plug>(coc-codeaction)
+nmap <leader>r <Plug>(coc-rename)
+nmap <leader>q <Plug>(coc-diagnostic-prev)
+nmap <leader>w <Plug>(coc-diagnostic-next)
+nnoremap <leader>d :CocList diagnostics<CR>
+nmap <silent>gd <Plug>(coc-definition)
+nmap <silent>gr <Plug>(coc-references)
 
 " ### Status Line / Airline ###
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'
+let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 
 " ### Setup for seemless tmux integration
 let g:tmux_navigator_no_mappings = 1
@@ -76,11 +96,15 @@ nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 au BufRead,BufNewFile *.txt set filetype=markdown
 let g:vim_markdown_folding_disabled = 1
 
+" ### FZF ###
+let g:fzf_action = {
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 " ### NV ####
 let g:nv_search_paths=['~/notes']
 let g:nv_use_short_pathnames = 1
 let g:nv_default_extension = '.txt'
-nnoremap <Leader>n :NV<CR>
 let g:nv_keymap = {
     \ 'ctrl-s': 'split ',
     \ 'ctrl-v': 'vertical split ',

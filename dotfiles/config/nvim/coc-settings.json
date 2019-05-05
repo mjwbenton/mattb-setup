@@ -1,0 +1,16 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "Markdown"
+  ],
+  "coc.preferences.snippets.enable": false,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualText": true,
+  "json.format.enable": true,
+  "prettier.formatterPriority": 1,
+  "suggest.noselect": false
+}
