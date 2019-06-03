@@ -98,6 +98,7 @@ nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 " ### Markdown ###
 au BufRead,BufNewFile *.txt set filetype=markdown
 let g:vim_markdown_folding_disabled = 1
+autocmd Filetype markdown setlocal spell spelllang=en_us
 
 " ### FZF ###
 let g:fzf_action = {
