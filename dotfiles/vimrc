@@ -71,13 +71,14 @@ nnoremap <Leader>n :NV<CR>
 nnoremap <Leader>f :Explore!<CR>
 nnoremap <Leader>l :LivedownToggle<CR>
 nnoremap <Leader>s :Rg<CR>
+nnoremap <Leader>h :History<CR>
 " ## Coc Aliases ##
 inoremap <silent><expr> <c-space> coc#refresh()
 nmap <leader>a <Plug>(coc-codeaction)
 nmap <leader>r <Plug>(coc-rename)
 nmap <leader>q <Plug>(coc-diagnostic-prev)
 nmap <leader>w <Plug>(coc-diagnostic-next)
-nnoremap <leader>d :CocList diagnostics<CR>
+nnoremap <leader>i :CocList diagnostics<CR>
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gr <Plug>(coc-references)
 
