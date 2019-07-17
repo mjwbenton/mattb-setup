@@ -56,6 +56,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 
 " ### Search ###
 set incsearch
