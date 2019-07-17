@@ -1,4 +1,4 @@
-# mattb-setup osx scripts
+#mattb-setup osx scripts
 
 A collection of OSX specific setup scripts.
 
@@ -10,7 +10,7 @@ Before running any of these scripts, there some other stuff I normally do on a n
 - Manually change display scaling to “More Space”
 - Manually change hostname using System Preferences -> Sharing
 - Manually turn on sound icon in menu bar using System Preferences -> Sound
-- Manually change modifier keys to match keyboard (button inside keyboard preferences). Turn off Caps Lock.
+- Manually turn off Caps Lock using System Preferences -> Keyboard -> Modifier Keys
 - Open Finder preferences and...
   - Click show for all items on the Desktop
   - Go through sidebar items and show/hide whatever you want
@@ -24,9 +24,8 @@ Before running any of these scripts, there some other stuff I normally do on a n
 - Once all the software is installed...
   - You can run the non-OSX specific scripts
   - `osx/scripts/change_shell.zsh`
-  - `osx/scripts/setup_ubersicht.zsh`
   - `osx/scripts/setup_latex.zsh`
   - `osx/scripts/setup_iterm2.zsh`
-  - Manually configure Dropbox, nvALT, Crashplan
+  - Manually configure Dropbox, Crashplan
   - nvm install stable && nvm alias default stable
 - `osx/scripts/install_epsonscan.zsh`
