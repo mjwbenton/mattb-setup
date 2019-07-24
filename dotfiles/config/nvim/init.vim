@@ -123,6 +123,9 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_conceal_ctermfg = 'gray'
 
+" ### Notepad Setup ###
+command Pad :exe ":e! " . system('date +~/notes/scratch-%Y-%m-%d.txt') | :split ~/notes/todo.txt
+
 " ### Include .vimrc.local file for local overrides
 if filereadable(glob("~/.vimrc.local")) 
     source ~/.vimrc.local
