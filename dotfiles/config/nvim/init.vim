@@ -11,6 +11,7 @@ set undodir=~/.vim/undo
 set undofile
 set undolevels=1000
 set undoreload=10000
+set nofoldenable
 
 " ### vim-plug ###
 call plug#begin('~/.vim/plugged')
@@ -100,7 +101,6 @@ nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 " ### Markdown ###
 autocmd BufRead,BufNewFile *.txt set filetype=markdown
 autocmd Filetype markdown setlocal spell spelllang=en_us
-let g:vim_markdown_folding_disabled = 1
 
 " ### FZF ###
 let g:fzf_action = {
