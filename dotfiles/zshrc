@@ -1,7 +1,6 @@
 source ~/.zprezto/init.zsh
 export VISUAL=vim
 export EDITOR=$VISUAL
-export PATH="node_modules/.bin:$PATH"
 
 # aliases
 alias glog='git log --oneline --decorate --graph --all'
