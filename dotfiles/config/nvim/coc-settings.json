@@ -5,7 +5,9 @@
     "typescriptreact",
     "json",
     "javascriptreact",
-    "markdown"
+    "markdown",
+    "markdown.mdx",
+    "mdx"
   ],
   "coc.preferences.snippets.enable": false,
   "diagnostic.checkCurrentLine": true,

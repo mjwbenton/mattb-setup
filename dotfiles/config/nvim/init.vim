@@ -16,29 +16,39 @@ set nofoldenable
 " ### vim-plug ###
 call plug#begin('~/.vim/plugged')
 Plug 'godlygeek/tabular'
+Plug 'liuchengxu/vim-which-key'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'plasticboy/vim-markdown'
-Plug 'ayu-theme/ayu-vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'alok/notational-fzf-vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'plasticboy/vim-markdown'
+Plug 'ayu-theme/ayu-vim'
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
 Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'jxnblk/vim-mdx-js'
 " ## Coc ##
-Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 call plug#end()
+
+" ### Notepad Setup ###
+command Pad :exe ":e! " . system('date +~/notes/scratch-%Y-%m-%d.txt') | :split ~/notes/todo-house.txt | :split ~/notes/todo-projects.txt | :split ~/notes/todo.txt
+
+" ### WhichKey setup so that we can check what options are attached to
+" leaders
+nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 
 " ### Colours ###
 syntax on
@@ -48,17 +58,15 @@ set background=light
 let g:one_allow_italics = 1
 set t_Co=256
 
+" ### Tabs -> Spaces ###
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+
 " ### Lines ###
 set number
 set wrap
-
-" ### Tabs -> Spaces ###
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
-autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 
 " ### Search ###
 set incsearch
@@ -123,11 +131,3 @@ let g:nv_create_note_window = 'vertical split'
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_conceal_ctermfg = 'gray'
-
-" ### Notepad Setup ###
-command Pad :exe ":e! " . system('date +~/notes/scratch-%Y-%m-%d.txt') | :split ~/notes/todo.txt
-
-" ### Include .vimrc.local file for local overrides
-if filereadable(glob("~/.vimrc.local")) 
-    source ~/.vimrc.local
-endif
