@@ -1,0 +1,4 @@
+asvetliakov.vscode-neovim
+bradlc.vscode-tailwindcss
+esbenp.prettier-vscode
+GitHub.github-vscode-theme

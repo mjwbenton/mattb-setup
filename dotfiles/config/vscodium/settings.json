@@ -1,0 +1,18 @@
+{
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.inlineHints.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 11,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "workbench.statusBar.visible": false,
+  "terminal.integrated.fontSize": 11,
+  "explorer.confirmDelete": false,
+  "editor.scrollBeyondLastLine": false,
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/VSCodium/User/settings.vim",
+  "workbench.colorTheme": "GitHub Light"
+}
+
