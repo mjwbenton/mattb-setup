@@ -12,3 +12,5 @@ nnoremap <Leader>r <Cmd>call VSCodeNotify('editor.action.rename')<CR>
 nnoremap <Leader>a <Cmd>call VSCodeNotify('editor.action.quickFix')<CR>
 nnoremap gd <Cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
 nnoremap gr <Cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
+
+set clipboard=unnamed,unnamedplus "use the system clipboard
