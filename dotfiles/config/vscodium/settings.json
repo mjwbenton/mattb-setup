@@ -8,11 +8,14 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
-  "workbench.statusBar.visible": false,
   "terminal.integrated.fontSize": 11,
   "explorer.confirmDelete": false,
   "editor.scrollBeyondLastLine": false,
   "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/VSCodium/User/settings.vim",
-  "workbench.colorTheme": "GitHub Light"
+  "workbench.colorTheme": "GitHub Light",
+  "[mdx]":{
+      "editor.wordWrap": "wordWrapColumn",
+      "editor.wordWrapColumn": 80,
+  },
 }
 
