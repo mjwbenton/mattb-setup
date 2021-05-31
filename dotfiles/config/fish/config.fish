@@ -8,3 +8,4 @@ set -g async_prompt_functions _pure_prompt_git
 
 alias vim "nvim"
 alias glog "git log --oneline --decorate --graph --all"
+
