@@ -5,6 +5,7 @@ tap "neovim/neovim"
 brew 'awscli'
 brew 'duck'
 brew 'elinks'
+brew 'fish'
 brew 'fzf'
 brew 'git'
 brew 'gnu-tar'
