@@ -3,3 +3,4 @@ bradlc.vscode-tailwindcss
 esbenp.prettier-vscode
 GitHub.github-vscode-theme
 silvenon.mdx
+graphql.vscode-graphql
