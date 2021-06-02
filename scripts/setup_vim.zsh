@@ -1,6 +1,6 @@
 #!zsh -e
 
-# Assumes your vimrc is already in place which declares which plugins you want
+# Assumes your init.vim is already in place which declares which plugins you want
 
 # Install vim-plug
 curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs \
