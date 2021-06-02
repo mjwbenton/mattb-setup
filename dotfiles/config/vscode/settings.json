@@ -1,0 +1,30 @@
+{
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.inlineHints.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontSize": 11,
+  "explorer.confirmDelete": false,
+  "editor.scrollBeyondLastLine": false,
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Code/User/settings.vim",
+  "[mdx]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
+  "workbench.colorTheme": "spaceduck",
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  }
+}

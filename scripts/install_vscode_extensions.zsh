@@ -1,3 +1,3 @@
 #!zsh -e
 
-xargs -n1 code --install-extension < ~/.config/vscodium/vscode-extensions.txt
+xargs -n1 code --install-extension < ~/.config/vscode/vscode-extensions.txt
