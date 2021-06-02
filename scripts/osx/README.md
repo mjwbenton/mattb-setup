@@ -24,7 +24,6 @@ Before running any of these scripts, there some other stuff I normally do on a n
 - Once all the software is installed...
   - You can run the non-OSX specific scripts
   - `osx/scripts/change_shell.zsh`
-  - `osx/scripts/setup_iterm2.zsh`
-  - Manually configure Dropbox, Crashplan
-  - nvm install stable && nvm alias default stable
+  - Manually configure Dropbox, Arq
+  - fnm install --lts
 - `osx/scripts/install_epsonscan.zsh`
