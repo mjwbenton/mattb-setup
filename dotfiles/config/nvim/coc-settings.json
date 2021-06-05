@@ -9,8 +9,12 @@
     "markdown.mdx",
     "mdx"
   ],
-  "coc.preferences.snippets.enable": false,
   "diagnostic.checkCurrentLine": true,
   "prettier.formatterPriority": 9999999999,
-  "suggest.noselect": false
+  "suggest.noselect": false,
+  "tsserver.disableAutomaticTypeAcquisition": true,
+  "tsserver.formatOnType": false,
+  "typescript.format.enabled": false,
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose"
 }

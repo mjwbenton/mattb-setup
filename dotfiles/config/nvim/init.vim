@@ -12,13 +12,17 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 set nofoldenable
+set updatetime=300
+set hidden
+set signcolumn=number
 
 " ### vim-plug ###
 call plug#begin('~/.vim/plugged')
 Plug 'godlygeek/tabular'
 Plug 'liuchengxu/vim-which-key'
 Plug 'hoob3rt/lualine.nvim'
-Plug 'airblade/vim-gitgutter'
+Plug 'romgrk/barbar.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'shaunsingh/moonlight.nvim'
@@ -26,6 +30,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 " ## Coc ##
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -92,13 +97,19 @@ set smartcase
 let g:netrw_liststyle=3
 
 " ### Aliases ###
-nnoremap <Leader>f :Telescope file_browser<CR>
-nnoremap <Leader>s :Telescope live_grep<CR>
-nnoremap <Leader>p :Telescope git_files<CR>
-nnoremap <Leader>h :Telescope oldfiles<CR>
-nnoremap <Leader>c :Telescope commands<CR>
-nnoremap <Leader>l :LivedownToggle<CR>
-" ## Coc Aliases ##
+" Show Files
+nnoremap <Leader>sf :NvimTreeToggle<CR>
+" Find
+nnoremap <Leader>fs :Telescope live_grep<CR>
+nnoremap <Leader>ff :Telescope git_files<CR>
+nnoremap <Leader>fg :Telescope git_status<CR>
+nnoremap <Leader>fh :Telescope oldfiles<CR>
+nnoremap <Leader>fc :Telescope commands<CR>
+" Buffer
+nnoremap <Leader>bn :BufferNext<CR>
+nnoremap <Leader>bp :BufferPrevious<CR>
+nnoremap <Leader>bc :BufferClose<CR>
+" CoC
 inoremap <silent><expr> <c-space> coc#refresh()
 nmap <leader>a <Plug>(coc-codeaction)
 nmap <leader>r <Plug>(coc-rename)
@@ -111,6 +122,16 @@ lua << EOF
   require'lualine'.setup {
     options = {
       theme = 'moonlight'
+    },
+    sections = {
+      lualine_a = {'mode'},
+      lualine_b = {'filename'},
+      lualine_c = {'g:coc_status', {'diagnostics',
+        sources = {'coc'}
+        }},
+      lualine_x = {'filetype'},
+      lualine_y = {'progress'},
+      lualine_z = {'location'},
     }
   }
 EOF
@@ -126,7 +147,8 @@ nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
 autocmd BufRead,BufNewFile *.txt set filetype=markdown
 autocmd Filetype markdown setlocal spell spelllang=en_us
 
-" ### FZF ###
-let g:fzf_action = {
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit' }
+" ### Gitsigns ###
+lua << EOF
+  require('gitsigns').setup()
+EOF
+
