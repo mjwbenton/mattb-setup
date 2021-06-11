@@ -41,8 +41,10 @@ Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 call plug#end()
 
-" ### Notepad Setup ###
-command Pad :exe ":e! " . system('date +~/notes/scratch-%Y-%m-%d.txt') | :split ~/notes/todo-house.txt | :split ~/notes/todo-projects.txt | :split ~/notes/todo.txt
+" ### Commands to open specific files ###
+command Todo :lua require("mattb.todo").openAll()
+command Scratch :exe ":e! " . system('date +~/notes/scratch-%Y-%m-%d.txt')
+command Notes :cd ~/notes
 
 " ### WhichKey setup so that we can check what options are attached to
 " leaders
