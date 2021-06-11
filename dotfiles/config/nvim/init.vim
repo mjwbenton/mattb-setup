@@ -109,10 +109,11 @@ endfunction
 nnoremap <Leader>sf :NvimTreeToggle<CR>
 " Find
 nnoremap <Leader>fs :Telescope live_grep<CR>
-nnoremap <Leader>ff :Telescope git_files<CR>
+nnoremap <Leader>ff :Telescope find_files<CR>
 nnoremap <Leader>fg :Telescope git_status<CR>
 nnoremap <Leader>fh :Telescope oldfiles<CR>
 nnoremap <Leader>fc :Telescope commands<CR>
+nnoremap <Leader>fb :Telescope buffers<CR>
 " Rename
 nnoremap <leader>rf :call RenameFile()<cr>
 " Buffer
