@@ -93,8 +93,16 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" ### netrw ###
-let g:netrw_liststyle=3
+" ### Rename ###
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
 
 " ### Aliases ###
 " Show Files
@@ -105,6 +113,8 @@ nnoremap <Leader>ff :Telescope git_files<CR>
 nnoremap <Leader>fg :Telescope git_status<CR>
 nnoremap <Leader>fh :Telescope oldfiles<CR>
 nnoremap <Leader>fc :Telescope commands<CR>
+" Rename
+nnoremap <leader>rf :call RenameFile()<cr>
 " Buffer
 nnoremap <Leader>bn :BufferNext<CR>
 nnoremap <Leader>bp :BufferPrevious<CR>
