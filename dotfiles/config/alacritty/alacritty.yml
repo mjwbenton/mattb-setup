@@ -22,6 +22,16 @@ font:
     x: 1
     y: 2
 
+hints:
+  enabled:
+   - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+             [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+     command: open
+     post_processing: true
+     mouse:
+       enabled: true
+       mods: Command
+
 # Space Duck
 colors:
   # Default colors
