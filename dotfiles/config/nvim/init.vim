@@ -43,7 +43,7 @@ call plug#end()
 
 " ### Commands to open specific files ###
 command Todo :lua require("mattb.todo").openAll()
-command Scratch :exe ":e! " . system('date +~/notes/scratch-%Y-%m-%d.txt')
+command Scratch :exe ":e! ~/notes/scratch-" . strftime('%Y-%m-%d') . ".txt"
 command Notes :cd ~/notes
 
 " ### WhichKey setup so that we can check what options are attached to
