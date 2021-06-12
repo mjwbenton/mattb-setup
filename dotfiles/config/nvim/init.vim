@@ -106,7 +106,8 @@ function! RenameFile()
     endif
 endfunction
 
-" ### Aliases ###
+" ### Mappings ###
+nnoremap <silent> <Leader>rv :source $MYVIMRC<CR>
 " Show Files
 nnoremap <Leader>sf :NvimTreeToggle<CR>
 " Find
