@@ -125,11 +125,11 @@ nnoremap <Leader>bp :BufferPrevious<CR>
 nnoremap <Leader>bc :BufferClose<CR>
 " CoC
 inoremap <silent><expr> <c-space> coc#refresh()
-nmap <leader>a <Plug>(coc-codeaction)
-nmap <leader>r <Plug>(coc-rename)
+nnoremap <leader>a <Plug>(coc-codeaction)
+nnoremap <leader>r <Plug>(coc-rename)
 nnoremap <leader>i :CocList diagnostics<CR>
-nmap <silent>gd <Plug>(coc-definition)
-nmap <silent>gr <Plug>(coc-references)
+nnoremap <silent>gd <Plug>(coc-definition)
+nnoremap <silent>gr <Plug>(coc-references)
 
 " ### Lualine ###
 lua << EOF
