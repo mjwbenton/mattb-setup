@@ -130,6 +130,10 @@ nnoremap <leader>r <Plug>(coc-rename)
 nnoremap <leader>i :CocList diagnostics<CR>
 nnoremap <silent>gd <Plug>(coc-definition)
 nnoremap <silent>gr <Plug>(coc-references)
+" Input
+cnoremap <C-d> <C-R>=strftime('%Y-%m-%d')<CR>
+inoremap <C-d> <C-R>=strftime('%Y-%m-%d')<CR>
+
 
 " ### Lualine ###
 lua << EOF
