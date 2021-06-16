@@ -125,15 +125,14 @@ nnoremap <Leader>bp :BufferPrevious<CR>
 nnoremap <Leader>bc :BufferClose<CR>
 " CoC
 inoremap <silent><expr> <c-space> coc#refresh()
-nnoremap <leader>a <Plug>(coc-codeaction)
-nnoremap <leader>r <Plug>(coc-rename)
+nmap <leader>a <Plug>(coc-codeaction)
+nmap <leader>r <Plug>(coc-rename)
 nnoremap <leader>i :CocList diagnostics<CR>
-nnoremap <silent>gd <Plug>(coc-definition)
-nnoremap <silent>gr <Plug>(coc-references)
+nmap <silent>gd <Plug>(coc-definition)
+nmap <silent>gr <Plug>(coc-references)
 " Input
 cnoremap <C-d> <C-R>=strftime('%Y-%m-%d')<CR>
 inoremap <C-d> <C-R>=strftime('%Y-%m-%d')<CR>
-
 
 " ### Lualine ###
 lua << EOF
