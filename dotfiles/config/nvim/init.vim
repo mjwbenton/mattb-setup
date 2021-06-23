@@ -15,6 +15,7 @@ set nofoldenable
 set updatetime=300
 set hidden
 set signcolumn=number
+command! W :write
 
 " ### vim-plug ###
 call plug#begin('~/.vim/plugged')
