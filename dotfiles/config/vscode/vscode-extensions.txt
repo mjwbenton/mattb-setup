@@ -3,4 +3,4 @@ bradlc.vscode-tailwindcss
 esbenp.prettier-vscode
 silvenon.mdx
 graphql.vscode-graphql
-spaceduck-vscode.spaceduck
+youssefbouzekri.spaceduck
