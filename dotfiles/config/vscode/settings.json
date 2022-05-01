@@ -1,5 +1,5 @@
 {
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.tabSize": 2,
   "editor.inlineHints.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
