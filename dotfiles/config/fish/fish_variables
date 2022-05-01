@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fisher_2m_2F_fish_2D_history_2D_merge_files:/Users/mattb/\x2econfig/fish/functions/up\x2dor\x2dsearch\x2efish
 SETUVAR _fisher_acomagu_2F_fish_2D_async_2D_prompt_files:/Users/mattb/\x2econfig/fish/conf\x2ed/__async_prompt\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/mattb/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/mattb/\x2econfig/fish/completions/fisher\x2efish
@@ -34,7 +34,8 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:\x1d
+SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/opt/homebrew/bin
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute
