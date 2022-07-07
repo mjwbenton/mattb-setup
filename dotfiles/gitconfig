@@ -16,3 +16,5 @@
     amend = commit -a --amend --no-edit
 [include]
     path = ~/.gitconfig.local
+[init]
+	defaultBranch = main
