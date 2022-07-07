@@ -1,9 +1,9 @@
 #!zsh -e
 # TODO: Move to a cask
-url=https://ftp.epson.com/drivers/epson16676.dmg
+url=https://ftp.epson.com/drivers/V700_V750_EScan2_64100_AM.dmg
 output_dmg=/tmp/epsonscan.dmg
 mount_point=/tmp/mountroot
-installer="$mount_point/EPSON Scan.pkg"
+installer="$mount_point/EPSON Scan 2.pkg"
 
 echo "Fetching $url"
 wget --quiet --output-document=$output_dmg $url
