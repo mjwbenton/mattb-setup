@@ -1,0 +1,34 @@
+{
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontSize": 11,
+  "explorer.confirmDelete": false,
+  "editor.scrollBeyondLastLine": false,
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/Library/Application Support/Cursor/User/settings.vim",
+  "[mdx]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
+  "workbench.colorTheme": "spaceduck",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "editor.inlineSuggest.enabled": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "prettier.prettierPath": "./node_modules/prettier",
+}
