@@ -26,6 +26,8 @@
       }
     ]
   },
+  "typescript.tsserver.log": "off",
+  "explorer.confirmDragAndDrop": false,
   "editor.inlineSuggest.enabled": true,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
@@ -33,4 +35,5 @@
   "workbench.editor.empty.hint": "hidden",
   "prettier.prettierPath": "./node_modules/prettier",
   "github.copilot.editor.enableAutoCompletions": true
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
