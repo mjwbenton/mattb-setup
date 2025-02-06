@@ -31,4 +31,5 @@
   },
   "workbench.editor.empty.hint": "hidden",
   "prettier.prettierPath": "./node_modules/prettier",
+  "window.commandCenter": 1,
 }
