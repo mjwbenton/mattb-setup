@@ -14,6 +14,8 @@ alias vim "nvim"
 alias glog "git log --oneline --decorate --graph --all"
 alias tar "gtar"
 
+abbr -a gcb "git checkout -b \$(git log -1 --pretty=%s | awk -F': ' '{ print \"mjwbenton/\" \$1 \"/\" \$2 }' | tr ' ' '-')"
+
 # Environment variables
 
 set VISUAL "nvim"
