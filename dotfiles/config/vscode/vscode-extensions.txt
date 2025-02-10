@@ -1,7 +1,7 @@
 asvetliakov.vscode-neovim
-bradlc.vscode-tailwindcss
 esbenp.prettier-vscode
-silvenon.mdx
 graphql.vscode-graphql
 youssefbouzekri.spaceduck
 GitHub.copilot
+dbaeumer.vscode-eslint
+fabiospampinato.vscode-open-in-github
