@@ -24,6 +24,6 @@ Before running any of these scripts, there some other stuff I normally do on a n
 - Once all the software is installed...
   - You can run the non-OSX specific scripts
   - `osx/scripts/change_shell.zsh`
-  - Manually configure Dropbox, Arq
+  - Manually configure Dropbox, Arq, Strongbox
   - fnm install --lts
 - `osx/scripts/install_epsonscan.zsh`
