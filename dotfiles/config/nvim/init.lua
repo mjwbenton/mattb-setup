@@ -26,7 +26,16 @@ require("lazy").setup({
 		{
 			'nvim-telescope/telescope.nvim',
 			tag = 'v0.2.0',
-			dependencies = { 'nvim-lua/plenary.nvim' }
+			dependencies = { 'nvim-lua/plenary.nvim' },
+			config = function()
+				require('telescope').setup({
+					pickers = {
+						find_files = {
+							hidden = true,
+						},
+					},
+				})
+			end,
 		},
 		{
 			'projekt0n/github-nvim-theme',
