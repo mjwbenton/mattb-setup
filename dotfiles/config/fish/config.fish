@@ -7,6 +7,7 @@ set -g async_prompt_functions _pure_prompt_git
 # Homebrew
 
 fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/opt/openjdk/bin
 
 # Aliases
 
