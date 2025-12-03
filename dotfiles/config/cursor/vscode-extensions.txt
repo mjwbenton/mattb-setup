@@ -1,3 +1,0 @@
-asvetliakov.vscode-neovim
-esbenp.prettier-vscode
-graphql.vscode-graphql
