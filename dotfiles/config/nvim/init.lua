@@ -44,3 +44,11 @@ require("lazy").setup({
 -- Copy from system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Telescope keymaps
+vim.keymap.set('n', '<Leader>fs', '<cmd>Telescope live_grep<cr>')
+vim.keymap.set('n', '<Leader>ff', '<cmd>Telescope find_files<cr>')
+vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope git_status<cr>')
+vim.keymap.set('n', '<Leader>fh', '<cmd>Telescope oldfiles<cr>')
+vim.keymap.set('n', '<Leader>fc', '<cmd>Telescope commands<cr>')
+vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
+
