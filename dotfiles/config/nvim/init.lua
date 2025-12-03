@@ -72,6 +72,23 @@ require("lazy").setup({
           },
         })
       end,
+    },
+    {
+      'mason-org/mason-lspconfig.nvim',
+      dependencies = {
+        { 'mason-org/mason.nvim', opts = {} },
+        'neovim/nvim-lspconfig',
+      },
+      config = function()
+        require('mason-lspconfig').setup({
+          ensure_installed = { 'lua_ls', 'ts_ls' },
+          handlers = {
+            function(server_name)
+              require('lspconfig')[server_name].setup({})
+            end,
+          },
+        })
+      end,
     }
   },
   install = { colorscheme = { "habamax" } },
