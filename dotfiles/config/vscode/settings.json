@@ -2,7 +2,6 @@
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.tabSize": 2,
-  "editor.inlineHints.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
@@ -15,7 +14,6 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
   },
-  "workbench.colorTheme": "spaceduck",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -34,6 +32,8 @@
   },
   "workbench.editor.empty.hint": "hidden",
   "prettier.prettierPath": "./node_modules/prettier",
-  "github.copilot.editor.enableAutoCompletions": true
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "chat.disableAIFeatures": true,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "default"
 }
