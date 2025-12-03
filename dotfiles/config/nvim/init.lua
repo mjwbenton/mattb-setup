@@ -35,6 +35,18 @@ require("lazy").setup({
       config = function()
         vim.cmd('colorscheme github_dark_colorblind')
       end,
+    },
+    {
+      'nvim-treesitter/nvim-treesitter',
+      build = ':TSUpdate',
+      config = function()
+        require('nvim-treesitter.configs').setup({
+          ensure_installed = { 'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'python', 'bash', 'json', 'yaml', 'html', 'css' },
+          auto_install = true,
+          highlight = { enable = true },
+          indent = { enable = true },
+        })
+      end,
     }
   },
   install = { colorscheme = { "habamax" } },
