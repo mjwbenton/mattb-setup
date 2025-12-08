@@ -141,3 +141,8 @@ vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope git_status<cr>')
 vim.keymap.set('n', '<Leader>fh', '<cmd>Telescope oldfiles<cr>')
 vim.keymap.set('n', '<Leader>fc', '<cmd>Telescope commands<cr>')
 vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
+
+-- LSP keymaps
+vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>')
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover)
