@@ -1,3 +1,3 @@
 #!/bin/sh
-sudo softwareupdate --install-rosetta
+sudo softwareupdate --install-rosetta --agree-to-license
 
