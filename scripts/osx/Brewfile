@@ -1,7 +1,5 @@
 cask_args appdir: "/Applications"
-tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "neovim/neovim"
 brew 'awscli'
 brew 'fd'
 brew 'fish'
