@@ -1,4 +1,4 @@
-#!zsh -e
+#!/bin/zsh -e
 
 # Assumes your init.vim is already in place which declares which plugins you want
 

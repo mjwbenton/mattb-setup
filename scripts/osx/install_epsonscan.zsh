@@ -1,4 +1,4 @@
-#!zsh -e
+#!/bin/zsh -e
 # TODO: Move to a cask
 url=https://ftp.epson.com/drivers/V700_V750_EScan2_64100_AM.dmg
 output_dmg=/tmp/epsonscan.dmg

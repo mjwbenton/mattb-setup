@@ -1,4 +1,4 @@
-#!zsh -e
+#!/bin/zsh -e
 
 mkdir -p ~/workspace/
 cd ~/workspace/

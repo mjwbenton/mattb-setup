@@ -1,4 +1,4 @@
-#!zsh -e
+#!/bin/zsh -e
 # Strongbox
 mas install 897283731
 # Shush

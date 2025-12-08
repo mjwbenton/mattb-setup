@@ -1,4 +1,4 @@
-#!zsh -e
+#!/bin/zsh -e
 SHELLS_FILE=/etc/shells
 NEW_SHELL=/opt/homebrew/bin/fish
 if ! [[ $(cat $SHELLS_FILE) =~ $NEW_SHELL ]]

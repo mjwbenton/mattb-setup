@@ -1,4 +1,4 @@
-#!zsh -e
+#!/bin/zsh -e
 
 # mattb-setup root directory is always the directory above this script
 cd ${0:a:h}/../
