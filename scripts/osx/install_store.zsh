@@ -9,5 +9,7 @@ mas install 1432731683
 mas install 1544743900
 # Numbers
 mas install 409203825
+# Kindle
+mas install 302584613
 # Xcode
 mas install 497799835
