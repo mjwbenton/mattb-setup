@@ -110,6 +110,21 @@ require("lazy").setup({
 			end,
 		},
 		{
+			'mfussenegger/nvim-lint',
+			event = { 'BufReadPre', 'BufNewFile' },
+			config = function()
+				require('lint').linters_by_ft = {
+					markdown = { 'cspell' },
+					text = { 'cspell' },
+				}
+				vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
+					callback = function()
+						require('lint').try_lint()
+					end,
+				})
+			end,
+		},
+		{
 			'christoomey/vim-tmux-navigator',
 			init = function()
 				vim.g.tmux_navigator_no_mappings = 1
@@ -146,3 +161,10 @@ vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>')
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+
+-- Treat MDX files as markdown for syntax highlighting
+vim.filetype.add({
+	extension = {
+		mdx = 'markdown',
+	},
+})
