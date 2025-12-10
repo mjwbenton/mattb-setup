@@ -28,3 +28,44 @@ Before running any of these scripts, there some other stuff I normally do on a n
   - Manually configure Dropbox, Arq 5, Strongbox
   - fnm install --lts
 - `scripts/osx/install_epsonscan.zsh`
+- `scripts/osx/install_store.zsh`
+
+## Next Steps
+
+- Login to Dropbox
+- Login to Claude
+- Login to Claude Code
+- Login to Notion
+- Manually configure Arq
+
+### Phoenix
+
+- `fnm install --lts`
+- `scripts/osx/setup_phoenix.zsh`
+- Start Phoenix and give it accessibility access
+
+### Strongbox
+
+- Startup and connect to Dropbox
+- In "Autofill & Passwords" turn off autofilling from the Passwords app and turn on autofilling from Strongbox
+
+### Daisydisk
+
+- Enter daisydisk license key (search "daisydisk" in gmail)
+
+### VSCode
+
+- `scripts/osx/setup_vscode.zsh`
+- `scripts/install_vscode_extensions.zsh`
+
+### Safari
+
+- Login to Gmail and Google Calendar
+- For Each `File > Add to Dock`
+- Open extension settings and ensure they're all enabled
+
+### Change Setup Repo Remote
+
+- Once you've got SSH keys setup
+- git remote set-url origin ssh://git@github.com/mjwbenton/mattb-setup.mattbook.git
+- git remote set-url origin ssh://git@github.com/mjwbenton/mattb-setup.git
