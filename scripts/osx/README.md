@@ -38,9 +38,13 @@ Before running any of these scripts, there some other stuff I normally do on a n
 - Login to Notion
 - Manually configure Arq
 
-### Phoenix
+## Node
 
 - `fnm install --lts`
+- `corepack enable`
+
+### Phoenix
+
 - `scripts/osx/setup_phoenix.zsh`
 - Start Phoenix and give it accessibility access
 
