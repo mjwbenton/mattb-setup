@@ -1,5 +1,5 @@
 cask_args appdir: "/Applications"
-tap "homebrew/cask-versions"
+tap "mobile-dev-inc/tap"
 brew 'awscli'
 brew 'fd'
 brew 'fish'
@@ -19,7 +19,9 @@ brew 'watch'
 brew 'watchman'
 brew 'wget'
 cask 'alacritty'
-cask 'arq5'
+cask 'arq@5'
+cask 'claude'
+cask 'claude-code'
 cask 'cyberduck'
 cask 'daisydisk'
 cask 'dropbox'
