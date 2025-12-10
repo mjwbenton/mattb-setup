@@ -1,7 +1,6 @@
 asvetliakov.vscode-neovim
 esbenp.prettier-vscode
 graphql.vscode-graphql
-youssefbouzekri.spaceduck
-GitHub.copilot
 dbaeumer.vscode-eslint
 fabiospampinato.vscode-open-in-github
+anthropic.claude-code
