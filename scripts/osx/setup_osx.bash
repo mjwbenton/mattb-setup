@@ -41,6 +41,19 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock wvous-tr-corner -int 5
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
+# ----- Screenshots go to ~/screenshots
+mkdir -p ~/screenshots
+defaults write com.apple.screencapture location ~/screenshots
+
+# ----- Create workspace and scratch folders
+mkdir -p ~/workspace
+mkdir -p ~/scratch
+
+# ----- Add folders to Finder sidebar
+mysides add screenshots file://${HOME}/screenshots
+mysides add workspace file://${HOME}/workspace
+mysides add scratch file://${HOME}/scratch
+
 # ----- Kill affected apps to get them to restart
 for app in "cfprefsd" "Dock" "Finder" "SystemUIServer"; do
     killall "${app}" > /dev/null 2>&1
