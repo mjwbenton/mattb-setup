@@ -1,3 +1,6 @@
+---
+# cSpell:words mattb daisydisk autofilling epsonscan mjwbenton mattbook cocatalog
+---
 # mattb-setup osx scripts
 
 A collection of OSX specific setup scripts.
@@ -73,3 +76,7 @@ Before running any of these scripts, there some other stuff I normally do on a n
 - Once you've got SSH keys setup
 - git remote set-url origin ssh://git@github.com/mjwbenton/mattb-setup.mattbook.git
 - git remote set-url origin ssh://git@github.com/mjwbenton/mattb-setup.git
+
+### Capture One
+
+- Copy over the catalog file (\~/Pictures/Capture One Catalog.cocatalog) and settings (\~/Library/Application Support/Capture One)
