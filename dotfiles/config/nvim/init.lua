@@ -135,7 +135,18 @@ require("lazy").setup({
 				{ '<C-w>k', '<cmd>TmuxNavigateUp<cr>', silent = true },
 				{ '<C-w>l', '<cmd>TmuxNavigateRight<cr>', silent = true },
 			},
-		}
+		},
+		{
+			'nvim-tree/nvim-tree.lua',
+			dependencies = { 'nvim-tree/nvim-web-devicons' },
+			config = function()
+				require('nvim-tree').setup({
+					view = {
+						width = 30,
+					},
+				})
+			end,
+		},
 	},
 	install = { colorscheme = { "habamax" } },
 	checker = { enabled = true },
@@ -161,6 +172,9 @@ vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>')
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+
+-- File tree
+vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<cr>')
 
 -- Treat MDX files as markdown for syntax highlighting
 vim.filetype.add({
