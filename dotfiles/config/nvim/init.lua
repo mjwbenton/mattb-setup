@@ -149,7 +149,7 @@ require("lazy").setup({
 		},
 	},
 	install = { colorscheme = { "habamax" } },
-	checker = { enabled = true },
+	checker = { enabled = true, frequency = 604800 },
 })
 
 -- Copy from system clipboard
