@@ -1,3 +1,4 @@
 theme = GitHub Dark Colorblind
 macos-titlebar-style = hidden
 keybind = shift+enter=text:\x1b\r
+command = /opt/homebrew/bin/tmux new-session -A -s main
