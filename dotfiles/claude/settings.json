@@ -1,0 +1,15 @@
+{
+  "enabledPlugins": {},
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\a' > $(tmux display-message -p -t $TMUX_PANE '#{pane_tty}')"
+          }
+        ]
+      }
+    ]
+  }
+}
