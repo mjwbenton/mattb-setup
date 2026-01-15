@@ -147,6 +147,66 @@ require("lazy").setup({
 				})
 			end,
 		},
+		{
+			'olimorris/codecompanion.nvim',
+			dependencies = {
+				'nvim-lua/plenary.nvim',
+				'nvim-treesitter/nvim-treesitter',
+			},
+			config = function()
+				require('codecompanion').setup({
+					adapters = {
+						ollama = function()
+							return require('codecompanion.adapters').extend('ollama', {
+								schema = {
+									model = {
+										default = 'qwen2.5-coder:3b',
+									},
+								},
+							})
+						end,
+					},
+					strategies = {
+						chat = { adapter = 'ollama' },
+						inline = { adapter = 'ollama' },
+						cmd = { adapter = 'ollama' },
+					},
+				})
+			end,
+		},
+		{
+			'milanglacier/minuet-ai.nvim',
+			dependencies = { 'nvim-lua/plenary.nvim' },
+			config = function()
+				require('minuet').setup({
+					provider = 'openai_fim_compatible',
+					n_completions = 1,
+					context_window = 512,
+					virtualtext = {
+						auto_trigger_ft = { 'python', 'lua', 'javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'go', 'rust' },
+						keymap = {
+							accept = '<Tab>',
+							accept_line = '<Tab>',
+							next = '<Leader>cn',
+							prev = '<Leader>cp',
+							dismiss = '<Leader>cd',
+						},
+					},
+					provider_options = {
+						openai_fim_compatible = {
+							api_key = 'TERM',
+							name = 'Ollama',
+							end_point = 'http://localhost:11434/v1/completions',
+							model = 'qwen2.5-coder:3b',
+							optional = {
+								max_tokens = 56,
+								top_p = 0.9,
+							},
+						},
+					},
+				})
+			end,
+		},
 	},
 	install = { colorscheme = { "habamax" } },
 	checker = { enabled = true, frequency = 604800 },
