@@ -160,7 +160,7 @@ require("lazy").setup({
 							return require('codecompanion.adapters').extend('ollama', {
 								schema = {
 									model = {
-										default = 'qwen2.5-coder:3b',
+										default = 'qwen2.5-coder:14b',
 									},
 								},
 							})
@@ -197,7 +197,7 @@ require("lazy").setup({
 							api_key = 'TERM',
 							name = 'Ollama',
 							end_point = 'http://localhost:11434/v1/completions',
-							model = 'qwen2.5-coder:3b',
+							model = 'qwen2.5-coder:7b',
 							optional = {
 								max_tokens = 56,
 								top_p = 0.9,
@@ -232,6 +232,25 @@ vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
 vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>')
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+vim.keymap.set('n', '<Leader>a', vim.lsp.buf.code_action)
+
+-- Diagnostics config
+vim.diagnostic.config({
+	float = {
+		border = 'rounded',
+		source = true,
+	},
+})
+
+-- Show diagnostics on hover
+vim.api.nvim_create_autocmd('CursorHold', {
+	callback = function()
+		vim.diagnostic.open_float(nil, { focusable = false })
+	end,
+})
+
+-- Optional: reduce delay before showing (default is 4000ms)
+vim.opt.updatetime = 500
 
 -- File tree
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<cr>')
