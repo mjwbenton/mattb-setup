@@ -127,6 +127,11 @@ require("lazy").setup({
         })
         vim.lsp.config('harper_ls', {
           filetypes = { 'markdown' },
+          settings = {
+            ['harper-ls'] = {
+              dialect = 'British',
+            },
+          },
         })
         vim.lsp.enable({ 'lua_ls', 'ts_ls', 'harper_ls' })
       end,
@@ -184,7 +189,7 @@ require("lazy").setup({
           n_completions = 1,
           context_window = 512,
           virtualtext = {
-            auto_trigger_ft = { 'python', 'lua', 'javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'markdown' },
+            auto_trigger_ft = { 'python', 'lua', 'javascript', 'typescript', 'typescriptreact', 'javascriptreact' },
             keymap = {
               accept = '<Tab>',
               accept_line = '<Tab>',
