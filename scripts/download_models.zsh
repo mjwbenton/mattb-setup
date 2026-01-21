@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Download GGUF models for llama.cpp
 # - Gemma 3 4B for chat
-# - Qwen2.5-Coder 7B for code autocompletion
+# - Qwen2.5-Coder 3B for code autocompletion
 
 set -e
 
@@ -10,7 +10,7 @@ mkdir -p "$MODELS_DIR"
 
 echo "Downloading models to $MODELS_DIR..."
 
-# Gemma 3 4B Instruct (Q4_K_M quantization)
+# Gemma 3 4B Instruct
 GEMMA_FILE="gemma-3-4b-it-Q4_K_M.gguf"
 GEMMA_URL="https://huggingface.co/unsloth/gemma-3-4b-it-GGUF/resolve/main/${GEMMA_FILE}"
 
@@ -21,9 +21,9 @@ else
     curl -L -o "$MODELS_DIR/$GEMMA_FILE" "$GEMMA_URL"
 fi
 
-# Qwen2.5-Coder 7B Instruct (Q4_K_M quantization)
-QWEN_FILE="qwen2.5-coder-7b-instruct-q4_k_m.gguf"
-QWEN_URL="https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct-GGUF/resolve/main/${QWEN_FILE}"
+# Qwen2.5-Coder 3B
+QWEN_FILE="qwen2.5-coder-3b-q8_0.gguf"
+QWEN_URL="https://huggingface.co/ggml-org/Qwen2.5-Coder-3B-Q8_0-GGUF/resolve/main/${QWEN_FILE}"
 
 if [[ -f "$MODELS_DIR/$QWEN_FILE" ]]; then
     echo "✓ $QWEN_FILE already exists, skipping"
@@ -34,7 +34,3 @@ fi
 
 echo ""
 echo "Done! Models downloaded to $MODELS_DIR"
-echo ""
-echo "Usage:"
-echo "  Chat:        llama-cli -m $MODELS_DIR/$GEMMA_FILE -c 4096 -ngl 99 -cnv"
-echo "  Server:      llama-server -m $MODELS_DIR/$QWEN_FILE -c 4096 -ngl 99"
