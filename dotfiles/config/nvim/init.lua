@@ -127,6 +127,9 @@ require("lazy").setup({
             },
           },
         })
+        vim.lsp.config('harper_ls', {
+          filetypes = { 'markdown' },
+        })
         vim.lsp.enable({ 'lua_ls', 'ts_ls', 'harper_ls' })
       end,
     },
