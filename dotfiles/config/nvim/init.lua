@@ -87,20 +87,47 @@ require("lazy").setup({
       end,
     },
     {
+      'saghen/blink.cmp',
+      version = '1.*',
+      opts = {
+        keymap = { preset = 'default' },
+        appearance = { nerd_font_variant = 'mono' },
+        completion = { documentation = { auto_show = true } },
+        sources = { default = { 'lsp', 'path', 'buffer' } },
+        fuzzy = { implementation = 'prefer_rust_with_warning' },
+      },
+    },
+    {
       'mason-org/mason-lspconfig.nvim',
       dependencies = {
         { 'mason-org/mason.nvim', opts = {} },
-        'neovim/nvim-lspconfig',
+        { 'neovim/nvim-lspconfig' },
+        { 'saghen/blink.cmp' },
       },
       config = function()
         require('mason-lspconfig').setup({
           ensure_installed = { 'lua_ls', 'ts_ls', 'harper_ls' },
-          handlers = {
-            function(server_name)
-              require('lspconfig')[server_name].setup({})
-            end,
+        })
+        vim.lsp.config('*', {
+          capabilities = require('blink.cmp').get_lsp_capabilities(),
+        })
+        vim.lsp.config('lua_ls', {
+          settings = {
+            Lua = {
+              runtime = {
+                version = 'LuaJIT',
+              },
+              diagnostics = {
+                globals = { 'vim' },
+              },
+              workspace = {
+                library = { vim.env.VIMRUNTIME },
+                checkThirdParty = false,
+              },
+            },
           },
         })
+        vim.lsp.enable({ 'lua_ls', 'ts_ls', 'harper_ls' })
       end,
     },
     {
@@ -212,8 +239,12 @@ vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
 -- LSP keymaps
 vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>')
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', '<Leader>a', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename)
+vim.keymap.set('n', '<Leader>F', function() vim.lsp.buf.format({ async = true }) end)
 -- File tree
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<cr>')
 
