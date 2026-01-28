@@ -193,9 +193,9 @@ require("lazy").setup({
             keymap = {
               accept = '<Tab>',
               accept_line = '<Tab>',
-              next = '<Leader>cn',
-              prev = '<Leader>cp',
-              dismiss = '<Leader>cd',
+              next = '<C-j>',
+              prev = '<C-k>',
+              dismiss = '<C-e>',
             },
           },
           provider_options = {
