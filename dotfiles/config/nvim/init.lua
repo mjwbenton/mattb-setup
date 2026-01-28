@@ -231,6 +231,9 @@ require("lazy").setup({
 -- Copy from system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Always show sign column to prevent text shifting
+vim.opt.signcolumn = "yes"
+
 -- Tab settings
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
