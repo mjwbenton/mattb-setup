@@ -1,5 +1,4 @@
 {
-  "enabledPlugins": {},
   "hooks": {
     "Stop": [
       {
@@ -11,5 +10,6 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {}
 }
