@@ -30,6 +30,7 @@ Before running any of these scripts, there some other stuff I normally do on a n
   - `scripts/osx/change_shell.zsh`
   - Manually configure Dropbox, Arq 5, Strongbox
   - fnm install --lts
+  - rustup default stable
 - `scripts/osx/install_epsonscan.zsh`
 - `scripts/osx/install_store.zsh`
 

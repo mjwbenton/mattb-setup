@@ -54,7 +54,7 @@ require("lazy").setup({
       build = ':TSUpdate',
       config = function()
         require('nvim-treesitter').setup({
-          ensure_installed = { 'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'python', 'bash', 'json', 'yaml', 'html', 'css' },
+          ensure_installed = { 'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'python', 'bash', 'json', 'yaml', 'html', 'css', 'rust', 'toml' },
           auto_install = true,
         })
       end,
@@ -104,7 +104,7 @@ require("lazy").setup({
       },
       config = function()
         require('mason-lspconfig').setup({
-          ensure_installed = { 'lua_ls', 'ts_ls', 'harper_ls' },
+          ensure_installed = { 'lua_ls', 'ts_ls', 'harper_ls', 'rust_analyzer' },
         })
         vim.lsp.config('*', {
           capabilities = require('blink.cmp').get_lsp_capabilities(),
@@ -133,7 +133,7 @@ require("lazy").setup({
             },
           },
         })
-        vim.lsp.enable({ 'lua_ls', 'ts_ls', 'harper_ls' })
+        vim.lsp.enable({ 'lua_ls', 'ts_ls', 'harper_ls', 'rust_analyzer' })
       end,
     },
     {

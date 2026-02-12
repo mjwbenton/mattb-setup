@@ -14,6 +14,10 @@ fish_add_path /opt/homebrew/opt/openjdk/bin
 
 fish_add_path "/Users/mattb/.local/bin"
 
+# Rust/Cargo
+
+fish_add_path "/Users/mattb/.cargo/bin"
+
 # Aliases
 
 alias vim "nvim"
