@@ -17,6 +17,7 @@ fish_add_path "/Users/mattb/.local/bin"
 # Rust/Cargo
 
 fish_add_path "/Users/mattb/.cargo/bin"
+fish_add_path (brew --prefix rustup)/bin
 
 # Aliases
 
