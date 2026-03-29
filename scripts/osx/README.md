@@ -24,6 +24,7 @@ Before running any of these scripts, there some other stuff I normally do on a n
 - git clone this repo: `git clone https://github.com/mjwbenton/mattb-setup.git`
 - `scripts/osx/install_rosetta.sh`
 - `scripts/osx/install_brews.zsh`
+- `scripts/install_uv_tools.zsh`
 - `scripts/osx/setup_osx.bash`
 - Once all the software is installed...
   - You can run the non-OSX specific scripts
