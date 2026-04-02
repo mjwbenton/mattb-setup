@@ -22,9 +22,9 @@ fish_add_path (brew --prefix rustup)/bin
 # Aliases
 
 alias vim "nvim"
-alias glog "git log --oneline --decorate --graph --all"
 alias tar "gtar"
 
+abbr -a glog "git log --oneline --decorate --graph --all"
 abbr -a gcb "git checkout -b \$(git log -1 --pretty=%s | awk -F': ' '{ print \"mjwbenton/\" \$1 \"/\" \$2 }' | tr ' ' '-')"
 
 # Environment variables
