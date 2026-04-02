@@ -32,3 +32,7 @@ abbr -a gcb "git checkout -b \$(git log -1 --pretty=%s | awk -F': ' '{ print \"m
 set VISUAL "nvim"
 set EDITOR $VISUAL
 
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
