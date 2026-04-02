@@ -2,6 +2,7 @@ cask_args appdir: "/Applications"
 tap "mobile-dev-inc/tap"
 tap "hashicorp/tap"
 brew 'awscli'
+brew 'devcontainer'
 brew 'fd'
 brew 'fish'
 brew 'fnm'
@@ -40,6 +41,7 @@ cask 'meetingbar'
 cask 'netnewswire'
 cask 'notion'
 cask 'ollama-app'
+cask 'orbstack'
 cask 'phoenix'
 cask 'signal'
 cask 'spotify'

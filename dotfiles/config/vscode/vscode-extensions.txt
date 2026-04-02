@@ -1,6 +1,11 @@
 asvetliakov.vscode-neovim
 esbenp.prettier-vscode
 graphql.vscode-graphql
+graphql.vscode-graphql-syntax
 dbaeumer.vscode-eslint
 fabiospampinato.vscode-open-in-github
-anthropic.claude-code
+ms-python.vscode-pylance
+ms-python.python
+ms-python.debugpy
+ms-python.vscode-python-envs
+ms-vscode-remote.remote-containers
