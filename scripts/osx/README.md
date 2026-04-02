@@ -76,7 +76,6 @@ Before running any of these scripts, there some other stuff I normally do on a n
 ### Change Setup Repo Remote
 
 - Once you've got SSH keys setup
-- git remote set-url origin ssh://git@github.com/mjwbenton/mattb-setup.mattbook.git
 - git remote set-url origin ssh://git@github.com/mjwbenton/mattb-setup.git
 
 ### Capture One

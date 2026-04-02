@@ -14,7 +14,8 @@
 [alias]
 	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
     amend = commit -a --amend --no-edit
-[include]
-    path = ~/.gitconfig.local
+[user]
+	name = Matthew Benton
+	email = m@mattb.tech
 [init]
 	defaultBranch = main
