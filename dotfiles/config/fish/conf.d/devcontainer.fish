@@ -1,6 +1,7 @@
 # Devcontainer helpers:
-# 1. Wraps `code` to auto-connect to running devcontainers
-# 2. Warns before running non-allowlisted commands in devcontainer folders
+# 1. Wraps `devcontainer` to auto-inject dotfiles, Claude Code feature
+# 2. Wraps `code` to auto-connect to running devcontainers
+# 3. Warns before running non-allowlisted commands in devcontainer folders
 
 # Allowlist of commands that are safe to run on the host in a devcontainer folder
 set -g __devcontainer_allowlist \
@@ -11,6 +12,10 @@ set -g __devcontainer_allowlist \
     touch chmod chown date wc sort uniq tr cut diff comm tee \
     xargs seq basename dirname realpath popd pushd prevd nextd \
     dirh open pbcopy pbpaste ssh scp rsync curl wget
+
+# Custom aliases and abbreviations
+set -ga __devcontainer_allowlist \
+    c glog gcb
 
 function __devcontainer_check
     test -d "$PWD/.devcontainer"; or test -f "$PWD/.devcontainer.json"
@@ -28,6 +33,20 @@ function __devcontainer_preexec --on-event fish_preexec
         set_color yellow
         echo "⚠ Running on host — this folder has a devcontainer"
         set_color normal
+    end
+end
+
+abbr -a c devcontainer
+
+function devcontainer --wraps devcontainer
+    if test "$argv[1]" = "up"
+        command devcontainer up \
+            --dotfiles-repository https://github.com/mjwbenton/mattb-setup \
+            --dotfiles-install-command scripts/install_dotfiles.zsh \
+            --additional-features '{"ghcr.io/anthropics/devcontainer-features/claude-code:1.0":{}}' \
+            $argv[2..]
+    else
+        command devcontainer $argv
     end
 end
 
