@@ -60,104 +60,6 @@ require("lazy").setup({
       end,
     },
     {
-      'stevearc/conform.nvim',
-      event = { 'BufWritePre' },
-      cmd = { 'ConformInfo' },
-      config = function()
-        require('conform').setup({
-          formatters_by_ft = {
-            javascript = { 'prettier' },
-            typescript = { 'prettier' },
-            javascriptreact = { 'prettier' },
-            typescriptreact = { 'prettier' },
-            css = { 'prettier' },
-            html = { 'prettier' },
-            json = { 'prettier' },
-            yaml = { 'prettier' },
-            markdown = { 'prettier' },
-            graphql = { 'prettier' },
-          },
-          format_on_save = {
-            timeout_ms = 500,
-            lsp_fallback = true,
-          },
-        })
-      end,
-    },
-    {
-      'saghen/blink.cmp',
-      version = '1.*',
-      opts = {
-        keymap = { preset = 'default' },
-        appearance = { nerd_font_variant = 'mono' },
-        completion = { documentation = { auto_show = true } },
-        sources = { default = { 'lsp', 'path', 'buffer' } },
-        fuzzy = { implementation = 'prefer_rust_with_warning' },
-      },
-    },
-    {
-      'mason-org/mason-lspconfig.nvim',
-      dependencies = {
-        { 'mason-org/mason.nvim', opts = {} },
-        { 'neovim/nvim-lspconfig' },
-        { 'saghen/blink.cmp' },
-      },
-      config = function()
-        require('mason-lspconfig').setup({
-          ensure_installed = { 'lua_ls', 'ts_ls', 'harper_ls', 'rust_analyzer' },
-        })
-        vim.lsp.config('*', {
-          capabilities = require('blink.cmp').get_lsp_capabilities(),
-        })
-        vim.lsp.config('lua_ls', {
-          settings = {
-            Lua = {
-              runtime = {
-                version = 'LuaJIT',
-              },
-              diagnostics = {
-                globals = { 'vim' },
-              },
-              workspace = {
-                library = { vim.env.VIMRUNTIME },
-                checkThirdParty = false,
-              },
-            },
-          },
-        })
-        vim.lsp.config('harper_ls', {
-          filetypes = { 'markdown' },
-          settings = {
-            ['harper-ls'] = {
-              dialect = 'British',
-            },
-          },
-        })
-        vim.lsp.enable({ 'lua_ls', 'ts_ls', 'harper_ls', 'rust_analyzer' })
-      end,
-    },
-    {
-      'coder/claudecode.nvim',
-      config = function()
-        require('claudecode').setup()
-      end,
-    },
-    {
-      'mfussenegger/nvim-lint',
-      event = { 'BufReadPre', 'BufNewFile' },
-      config = function()
-        require('lint').linters_by_ft = {
-          markdown = { 'cspell' },
-          text = { 'cspell' },
-        }
-        vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
-          callback = function()
-            require('lint').try_lint()
-          end,
-        })
-      end,
-    },
-    {
       'christoomey/vim-tmux-navigator',
       init = function()
         vim.g.tmux_navigator_no_mappings = 1
@@ -188,9 +90,6 @@ require("lazy").setup({
 -- Copy from system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- Always show sign column to prevent text shifting
-vim.opt.signcolumn = "yes"
-
 -- Tab settings
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -212,31 +111,7 @@ vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope git_status<cr>')
 vim.keymap.set('n', '<Leader>fh', '<cmd>Telescope oldfiles<cr>')
 vim.keymap.set('n', '<Leader>fc', '<cmd>Telescope commands<cr>')
 vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<cr>')
--- LSP keymaps
-vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>')
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
-vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
-vim.keymap.set('n', 'K', vim.lsp.buf.hover)
-vim.keymap.set('n', '<Leader>a', vim.lsp.buf.code_action)
-vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename)
-vim.keymap.set('n', '<Leader>F', function() vim.lsp.buf.format({ async = true }) end)
 -- File tree
 vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeToggle<cr>')
 
 
--- ==== Diagnostics config =====
-vim.diagnostic.config({
-  float = {
-    border = 'rounded',
-    source = true,
-  },
-})
--- Show diagnostics on hover
-vim.api.nvim_create_autocmd('CursorHold', {
-  callback = function()
-    vim.diagnostic.open_float(nil, { focusable = false })
-  end,
-})
--- Delay before CursorHold triggers diagnostic float above (default 4000ms)
-vim.opt.updatetime = 500
