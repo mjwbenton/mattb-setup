@@ -19,5 +19,5 @@
   },
   "enabledPlugins": {},
   "effortLevel": "medium",
-  "autoUpdatesChannel": "stable"
+  "autoUpdates": false
 }
