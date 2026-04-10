@@ -1,7 +1,12 @@
 # Devcontainer helpers:
 # 1. Wraps `devcontainer` to auto-inject dotfiles, Claude Code feature
 # 2. Wraps `code` to auto-connect to running devcontainers
-# 3. Warns before running non-allowlisted commands in devcontainer folders
+# 3. Wraps important commands in a confirmation if you try and run it directly on host
+# 4. Warns before running non-allowlisted commands in devcontainer folders
+
+abbr -a c devcontainer
+abbr -a ce devcontainer exec
+abbr -a cclaude devcontainer exec claude --dangerously-skip-permissions
 
 # Allowlist of commands that are safe to run on the host in a devcontainer folder
 set -g __devcontainer_allowlist \
@@ -63,7 +68,6 @@ end
 # Add to allowlist so preexec doesn't double-warn
 set -ga __devcontainer_allowlist $__devcontainer_confirm_commands
 
-abbr -a c devcontainer
 
 function devcontainer --wraps devcontainer
     if test "$argv[1]" = "up"
