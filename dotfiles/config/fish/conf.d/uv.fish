@@ -1,1 +1,1 @@
-uv generate-shell-completion fish | source
+command uv generate-shell-completion fish | source

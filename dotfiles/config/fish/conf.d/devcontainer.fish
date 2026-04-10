@@ -36,6 +36,33 @@ function __devcontainer_preexec --on-event fish_preexec
     end
 end
 
+# Commands that require confirmation before running on host in devcontainer folders
+set -g __devcontainer_confirm_commands \
+    npm npx yarn pnpm node bun \
+    python python3 pip pip3 uv \
+    make cargo go
+
+function __devcontainer_run_with_confirm
+    set -l cmd $argv[1]
+    if not __devcontainer_check; or not status is-interactive
+        command $cmd $argv[2..]
+        return $status
+    end
+    read -l -P (set_color yellow)"⚠ $cmd: this folder has a devcontainer — run on host anyway? (y/N) "(set_color normal) response
+    if test "$response" = y; or test "$response" = Y
+        command $cmd $argv[2..]
+    else
+        return 1
+    end
+end
+
+for cmd in $__devcontainer_confirm_commands
+    echo "function $cmd --wraps $cmd; __devcontainer_run_with_confirm $cmd \$argv; end" | source
+end
+
+# Add to allowlist so preexec doesn't double-warn
+set -ga __devcontainer_allowlist $__devcontainer_confirm_commands
+
 abbr -a c devcontainer
 
 function devcontainer --wraps devcontainer
