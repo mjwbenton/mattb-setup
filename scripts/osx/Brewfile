@@ -1,6 +1,7 @@
 cask_args appdir: "/Applications"
 tap "mobile-dev-inc/tap"
 tap "hashicorp/tap"
+tap "pulumi/tap"
 brew 'awscli'
 brew 'devcontainer'
 brew 'fd'
@@ -43,6 +44,7 @@ cask 'notion'
 cask 'ollama-app'
 cask 'orbstack'
 cask 'phoenix'
+brew 'pulumi'
 cask 'signal'
 cask 'spotify'
 cask 'ungoogled-chromium'
