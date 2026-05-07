@@ -1,53 +1,7 @@
 #!/usr/bin/env zx
-import { homedir } from "os";
 
-const ROM_LIBRARY = `${homedir()}/games/roms/`;
-const BIOS_LIBRARY = `${homedir()}/games/bios/`;
-
-const NEXT_UI_SD_CARD = "/Volumes/BRICK";
-const BRICK_SYSTEMS = [
-  {
-    system: "gb",
-    biosPath: `${NEXT_UI_SD_CARD}/Bios/GB`,
-    romsPath: `${NEXT_UI_SD_CARD}/Roms/Game Boy (GB)`,
-    extension: "gb",
-  },
-  {
-    system: "gbc",
-    biosPath: `${NEXT_UI_SD_CARD}/Bios/GBC`,
-    romsPath: `${NEXT_UI_SD_CARD}/Roms/Game Boy Color (GBC)`,
-    extension: "gbc",
-  },
-  {
-    system: "gba",
-    biosPath: `${NEXT_UI_SD_CARD}/Bios/GBA`,
-    romsPath: `${NEXT_UI_SD_CARD}/Roms/Game Boy Advance (MGBA)`,
-    extension: "gba",
-  },
-  {
-    system: "snes",
-    biosPath: `${NEXT_UI_SD_CARD}/Bios/SUPA`,
-    romsPath: `${NEXT_UI_SD_CARD}/Roms/Super Nintendo Entertainment System (SUPA)`,
-    extension: "sfc",
-  },
-  {
-    system: "md",
-    biosPath: `${NEXT_UI_SD_CARD}/Bios/MD`,
-    romsPath: `${NEXT_UI_SD_CARD}/Roms/Sega Mega Drive (MD)`,
-    extension: "md",
-  },
-  {
-    system: "psx",
-    biosPath: `${NEXT_UI_SD_CARD}/Bios/PS`,
-    romsPath: `${NEXT_UI_SD_CARD}/Roms/Sony PlayStation (PS)`,
-    extension: "chd",
-  },
-  {
-    system: "tg16",
-    romsPath: `${NEXT_UI_SD_CARD}/Roms/TurboGrafx-16 (PCE)`,
-    extension: "pce",
-  },
-];
+const ROM_LIBRARY = `/Volumes/WBD/games/roms/`;
+const BIOS_LIBRARY = `/Volumes/WBD/games/bios/`;
 
 const N3DS_SD_CARD = "/Volumes/NO NAME";
 const N3DS_SYSTEMS = [
@@ -161,7 +115,6 @@ const AYANEO_POCKET_MICRO_SYSTEMS = [
 ];
 
 const SYSTEMS_MAP = {
-  BRICK: BRICK_SYSTEMS,
   N3DS: N3DS_SYSTEMS,
   AYAPM: AYANEO_POCKET_MICRO_SYSTEMS,
 };
