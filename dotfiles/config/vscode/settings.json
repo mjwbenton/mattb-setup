@@ -35,5 +35,6 @@
   "workbench.colorTheme": "Catppuccin Mocha",
   "chat.disableAIFeatures": true,
   "claudeCode.preferredLocation": "panel",
-  "claudeCode.selectedModel": "default"
+  "claudeCode.selectedModel": "default",
+  "git.blame.editorDecoration.enabled": false
 }
