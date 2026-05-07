@@ -73,8 +73,7 @@ function devcontainer --wraps devcontainer
     if test "$argv[1]" = "up"
         command devcontainer up \
             --dotfiles-repository https://github.com/mjwbenton/mattb-setup \
-            --dotfiles-install-command scripts/install_dotfiles.zsh \
-            --additional-features '{"ghcr.io/anthropics/devcontainer-features/claude-code:1.0":{}}' \
+            --dotfiles-install-command scripts/setup_container.zsh \
             $argv[2..]
     else
         command devcontainer $argv
