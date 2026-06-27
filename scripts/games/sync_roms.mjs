@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 
-const ROM_LIBRARY = `/Volumes/WBD/games/roms/`;
-const BIOS_LIBRARY = `/Volumes/WBD/games/bios/`;
+const ROM_LIBRARY = `/Volumes/WBD/Games/roms/`;
+const BIOS_LIBRARY = `/Volumes/WBD/Games/bios/`;
 
 const N3DS_SD_CARD = "/Volumes/NO NAME";
 const N3DS_SYSTEMS = [

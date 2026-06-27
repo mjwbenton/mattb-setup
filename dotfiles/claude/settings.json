@@ -2,8 +2,6 @@
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
-  "autoMemoryDirectory": "./.claude/memory",
-  "plansDirectory": "./.claude/plans",
   "permissions": {
     "defaultMode": "default"
   },
@@ -20,5 +18,11 @@
     ]
   },
   "enabledPlugins": {},
-  "autoUpdates": false
+  "plansDirectory": "./.claude/plans",
+  "autoMemoryDirectory": "./.claude/memory",
+  "autoUpdates": false,
+  "theme": "dark-daltonized",
+  "editorMode": "vim",
+  "autoCompactEnabled": false,
+  "model": "sonnet"
 }
