@@ -5,13 +5,14 @@
   "permissions": {
     "defaultMode": "default"
   },
+  "model": "opus",
   "hooks": {
     "Stop": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "printf '\\a' > /dev/tty"
+            "command": "t=$(tmux display -p -t \"$TMUX_PANE\" '#{pane_tty}' 2>/dev/null); { printf '\\a' > \"${t:-/dev/tty}\"; } 2>/dev/null || true"
           }
         ]
       }
@@ -19,10 +20,11 @@
   },
   "enabledPlugins": {},
   "plansDirectory": "./.claude/plans",
+  "tui": "fullscreen",
   "autoMemoryDirectory": "./.claude/memory",
-  "autoUpdates": false,
   "theme": "dark-daltonized",
   "editorMode": "vim",
   "autoCompactEnabled": false,
-  "model": "sonnet"
+  "agentPushNotifEnabled": true,
+  "autoUpdates": false
 }
