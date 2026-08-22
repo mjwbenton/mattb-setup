@@ -46,6 +46,12 @@ sso_account_id = 386807258445
 sso_role_name = Admin
 region = us-east-1
 
+[profile whenlast-admin]
+sso_session = my-sso
+sso_account_id = 027053845179
+sso_role_name = Admin
+region = us-east-1
+
 [sso-session my-sso]
 sso_start_url = https://d-906799efe9.awsapps.com/start#
 sso_region = us-east-1
