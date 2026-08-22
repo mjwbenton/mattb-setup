@@ -75,12 +75,6 @@ const AYANEO_POCKET_MICRO_SYSTEMS = [
     extension: "chd",
   },
   {
-    system: "ps2",
-    biosPath: `${AYANEO_POCKET_MICRO_SD_CARD}/bios`,
-    romsPath: `${AYANEO_POCKET_MICRO_SD_CARD}/roms/ps2`,
-    extension: "chd",
-  },
-  {
     system: "tg16",
     romsPath: `${AYANEO_POCKET_MICRO_SD_CARD}/roms/tg16`,
     extension: "pce",
@@ -103,13 +97,85 @@ const AYANEO_POCKET_MICRO_SYSTEMS = [
     extension: "chd",
   },
   {
+    system: "psp",
+    romsPath: `${AYANEO_POCKET_MICRO_SD_CARD}/roms/psp`,
+    extension: "chd",
+  },
+];
+
+const RETROID_POCKET_NOVA_SD_CARD = "/Volumes/RPNOVA";
+const RETROID_POCKET_NOVA_SYSTEMS = [
+  {
+    system: "gb",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/gb`,
+    extension: "gb",
+  },
+  {
+    system: "gbc",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/gbc`,
+    extension: "gbc",
+  },
+  {
+    system: "gba",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/gba`,
+    extension: "gba",
+  },
+  {
+    system: "snes",
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/snes`,
+    extension: "sfc",
+  },
+  {
+    system: "md",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/md`,
+    extension: "md",
+  },
+  {
+    system: "psx",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/ps`,
+    extension: "chd",
+  },
+  {
+    system: "ps2",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/ps2`,
+    extension: "chd",
+  },
+  {
+    system: "tg16",
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/tg16`,
+    extension: "pce",
+  },
+  {
+    system: "saturn",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/saturn`,
+    extension: "chd",
+  },
+  {
+    system: "n64",
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/n64`,
+    extension: "z64",
+  },
+  {
+    system: "dc",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/dc`,
+    extension: "chd",
+  },
+  {
     system: "gc",
-    romsPath: `${AYANEO_POCKET_MICRO_SD_CARD}/roms/gc`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/gc`,
     extension: "rvz",
   },
   {
     system: "psp",
-    romsPath: `${AYANEO_POCKET_MICRO_SD_CARD}/roms/psp`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/psp`,
     extension: "chd",
   },
 ];
@@ -117,6 +183,7 @@ const AYANEO_POCKET_MICRO_SYSTEMS = [
 const SYSTEMS_MAP = {
   N3DS: N3DS_SYSTEMS,
   AYAPM: AYANEO_POCKET_MICRO_SYSTEMS,
+  RPNOVA: RETROID_POCKET_NOVA_SYSTEMS,
 };
 
 async function syncSystem(system) {
