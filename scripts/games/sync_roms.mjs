@@ -178,6 +178,12 @@ const RETROID_POCKET_NOVA_SYSTEMS = [
     romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/psp`,
     extension: "chd",
   },
+  {
+    system: "xbox",
+    biosPath: `${RETROID_POCKET_NOVA_SD_CARD}/bios`,
+    romsPath: `${RETROID_POCKET_NOVA_SD_CARD}/roms/xbox`,
+    extension: "iso",
+  }
 ];
 
 const SYSTEMS_MAP = {
