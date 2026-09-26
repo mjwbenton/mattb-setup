@@ -7,6 +7,7 @@
 abbr -a c devcontainer
 abbr -a ce devcontainer exec
 abbr -a cclaude devcontainer exec claude --dangerously-skip-permissions
+abbr -a cpi devcontainer exec pi
 
 # Allowlist of commands that are safe to run on the host in a devcontainer folder
 set -g __devcontainer_allowlist \
