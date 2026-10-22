@@ -11,6 +11,9 @@ curl -fsSL https://claude.ai/install.sh | bash
 echo "Installing Pi..."
 curl -fsSL https://pi.dev/install.sh | sh
 pi install git:github.com/1broseidon/ketch
+npm install -g agent-browser
+agent-browser install
+pi install npm:pi-agent-browser-native
 
 # Install dotfiles
 echo "Installing dotfiles..."
