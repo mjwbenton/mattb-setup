@@ -10,6 +10,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 # Install Pi
 echo "Installing Pi..."
 curl -fsSL https://pi.dev/install.sh | sh
+pi install git:github.com/1broseidon/ketch
 
 # Install dotfiles
 echo "Installing dotfiles..."
