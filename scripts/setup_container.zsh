@@ -5,12 +5,12 @@ SCRIPT_DIR=${0:a:h}
 
 # Apt
 export DEBIAN_FRONTEND=noninteractive
-apt-get update 
-apt-get -y install --no-install-recommends \
+sudo apt-get update 
+sudo apt-get -y install --no-install-recommends \
   chromium \
   fonts-liberation \
-apt-get clean
-rm -rf /var/lib/apt/lists/*
+sudo apt-get clean
+sudo rm -rf /var/lib/apt/lists/*
 
 # Install Claude Code
 echo "Installing Claude Code..."
