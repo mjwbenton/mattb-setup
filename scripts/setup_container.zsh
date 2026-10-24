@@ -21,7 +21,7 @@ echo "Installing Pi..."
 curl -fsSL https://pi.dev/install.sh | sh
 pi install git:github.com/1broseidon/ketch
 npm install -g agent-browser
-npx skills add vercel-labs/agent-browser --agent pi -y
+npx skills add vercel-labs/agent-browser --agent pi -y -g
 
 # Configure agent-browser
 if ! grep -q "AGENT_BROWSER_EXECUTABLE_PATH" ~/.bashrc 2>/dev/null; then
