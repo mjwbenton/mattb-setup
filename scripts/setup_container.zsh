@@ -8,7 +8,7 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update 
 sudo apt-get -y install --no-install-recommends \
   chromium \
-  fonts-liberation \
+  fonts-liberation
 sudo apt-get clean
 sudo rm -rf /var/lib/apt/lists/*
 
